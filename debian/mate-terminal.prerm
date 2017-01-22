@@ -1,0 +1,11 @@
+#!/bin/sh
+
+set -e
+
+#DEBHELPER#
+
+if [ "$1" = "remove" ]; then
+	update-alternatives --remove x-terminal-emulator /usr/bin/mate-terminal.wrapper
+	rm /usr/local/bin/gnome-terminal || true
+fi
+
