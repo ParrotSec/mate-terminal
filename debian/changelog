@@ -1,8 +1,27 @@
-mate-terminal (1.16.1-1parrot0) testing; urgency=medium
+mate-terminal (1.16.3-1) unstable; urgency=medium
 
-  * Add gnome-terminal symlink to use mate-terminal on mate-menu
+  * New upstream release.
+    - Fix freezing Xorg on double click with right mouse button. (Closes:
+      #862035).
 
- -- Lorenzo "Palinuro" Faletra <palinuro@parrotsec.org>  Sun, 22 Jan 2017 12:02:01 +0100
+ -- Mike Gabriel <sunweaver@debian.org>  Sat, 03 Jun 2017 21:10:29 +0200
+
+mate-terminal (1.16.2-1) unstable; urgency=medium
+
+  * New upstream release.
+    - Bring back exit confirmation when there's a process running.
+      (Closes: #856279).
+    - etc., see upstream's NEWS file...
+
+ -- Mike Gabriel <sunweaver@debian.org>  Wed, 26 Apr 2017 21:29:15 +0200
+
+mate-terminal (1.16.1-2) unstable; urgency=medium
+
+  [ Martin Wimpress ]
+  * debian/control:
+    + Drop unused B-D docbook-to-man.
+
+ -- Mike Gabriel <sunweaver@debian.org>  Tue, 24 Jan 2017 20:04:13 +0100
 
 mate-terminal (1.16.1-1) unstable; urgency=medium
 
