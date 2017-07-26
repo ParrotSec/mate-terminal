@@ -44,6 +44,8 @@
 #include "skey-popup.h"
 #endif
 
+static gboolean detach_tab = FALSE;
+
 struct _TerminalWindowPrivate
 {
     GtkActionGroup *action_group;
@@ -1533,6 +1535,9 @@ popup_clipboard_targets_received_cb (GtkClipboard *clipboard,
     if (info->button == 0)
         gtk_menu_shell_select_first (GTK_MENU_SHELL (popup_menu), FALSE);
 
+    if (!gtk_menu_get_attach_widget (GTK_MENU (popup_menu)))
+        gtk_menu_attach_to_widget (GTK_MENU (popup_menu),GTK_WIDGET (screen),NULL);
+
     gtk_menu_popup (GTK_MENU (popup_menu),
                     NULL, NULL,
                     NULL, NULL,
@@ -2633,8 +2638,20 @@ terminal_window_remove_screen (TerminalWindow *window,
     update_tab_visibility (window, -1);
 
     screen_container = terminal_screen_container_get_from_screen (screen);
+#if GTK_CHECK_VERSION(3, 16, 0)
+    if (detach_tab)
+    {
+        gtk_notebook_detach_tab (GTK_NOTEBOOK (priv->notebook),
+                                 GTK_WIDGET (screen_container));
+        detach_tab = FALSE;
+    }
+    else
+        gtk_container_remove (GTK_CONTAINER (priv->notebook),
+                              GTK_WIDGET (screen_container));
+#else
     gtk_container_remove (GTK_CONTAINER (priv->notebook),
                           GTK_WIDGET (screen_container));
+#endif
 }
 
 void
@@ -2661,6 +2678,9 @@ terminal_window_move_screen (TerminalWindow *source_window,
      */
     g_object_ref_sink (screen_container);
     g_object_ref_sink (screen);
+
+    detach_tab = TRUE;
+
     terminal_window_remove_screen (source_window, screen);
 
     /* Now we can safely remove the screen from the container and let the container die */
@@ -2668,6 +2688,7 @@ terminal_window_move_screen (TerminalWindow *source_window,
     g_object_unref (screen_container);
 
     terminal_window_add_screen (dest_window, screen, dest_position);
+    gtk_notebook_set_current_page (GTK_NOTEBOOK (dest_window->priv->notebook), dest_position);
     g_object_unref (screen);
 }
 
@@ -2891,6 +2912,7 @@ notebook_button_press_cb (GtkWidget *widget,
 {
     TerminalWindowPrivate *priv = window->priv;
     GtkNotebook *notebook = GTK_NOTEBOOK (widget);
+    GtkWidget *tab;
     GtkWidget *menu;
     GtkAction *action;
     int tab_clicked;
@@ -2911,6 +2933,10 @@ notebook_button_press_cb (GtkWidget *widget,
     gtk_action_activate (action);
 
     menu = gtk_ui_manager_get_widget (priv->ui_manager, "/NotebookPopup");
+    if (gtk_menu_get_attach_widget (GTK_MENU (menu)))
+      gtk_menu_detach (GTK_MENU (menu));
+    tab = gtk_notebook_get_nth_page (notebook, tab_clicked);
+    gtk_menu_attach_to_widget (GTK_MENU (menu), tab, NULL);
     gtk_menu_popup (GTK_MENU (menu), NULL, NULL,
                     NULL, NULL,
                     event->button, event->time);
@@ -2941,6 +2967,9 @@ notebook_popup_menu_cb (GtkWidget *widget,
     gtk_action_activate (action);
 
     menu = gtk_ui_manager_get_widget (priv->ui_manager, "/NotebookPopup");
+    if (gtk_menu_get_attach_widget (GTK_MENU (menu)))
+      gtk_menu_detach (GTK_MENU (menu));
+    gtk_menu_attach_to_widget (GTK_MENU (menu), tab_label, NULL);
     gtk_menu_popup (GTK_MENU (menu), NULL, NULL,
                     position_menu_under_widget, tab_label,
                     0, gtk_get_current_event_time ());
@@ -3033,6 +3062,7 @@ notebook_page_added_callback (GtkWidget       *notebook,
 {
     TerminalWindowPrivate *priv = window->priv;
     TerminalScreen *screen;
+    int pages;
 
     screen = terminal_screen_container_get_screen (TERMINAL_SCREEN_CONTAINER (container));
 
@@ -3091,6 +3121,8 @@ notebook_page_added_callback (GtkWidget       *notebook,
         gtk_window_present_with_time (GTK_WINDOW (window), gtk_get_current_event_time ());
         priv->present_on_insert = FALSE;
     }
+    pages = gtk_notebook_get_n_pages (GTK_NOTEBOOK (notebook));
+    if (pages == 2) terminal_window_update_size (window, priv->active_screen, TRUE);
 }
 
 static void
