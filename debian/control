@@ -29,7 +29,7 @@ Multi-Arch: foreign
 Architecture: any
 Depends: gsettings-desktop-schemas,
          mate-desktop-common,
-         mate-terminal-common (= ${source:Version}),
+         mate-terminal-common (>= ${source:Version}),
          ${misc:Depends},
          ${shlibs:Depends},
 Provides: x-terminal-emulator,
