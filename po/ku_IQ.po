@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Rasti K5 <rasti.khdhr@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
@@ -10,11 +11,11 @@ msgstr ""
 "POT-Creation-Date: 2016-12-06 01:12+0300\n"
 "PO-Revision-Date: 2016-12-05 22:13+0000\n"
 "Last-Translator: monsta <monsta@inbox.ru>\n"
-"Language-Team: Sinhala (http://www.transifex.com/mate/MATE/language/si/)\n"
+"Language-Team: Kurdish (Iraq) (http://www.transifex.com/mate/MATE/language/ku_IQ/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: si\n"
+"Language: ku_IQ\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../mate-terminal.appdata.xml.in.h:1
@@ -35,13 +36,13 @@ msgstr ""
 #: ../mate-terminal.desktop.in.in.h:1 ../src/terminal-options.c:189
 #: ../src/terminal-window.c:4345
 msgid "MATE Terminal"
-msgstr "ග්නෝම් අග්‍රය"
+msgstr "تێرمیناڵی MATE"
 
 #: ../mate-terminal.desktop.in.in.h:2 ../src/terminal-accels.c:321
 #: ../src/terminal.c:587 ../src/terminal-profile.c:161
 #: ../src/terminal-window.c:2185
 msgid "Terminal"
-msgstr "අග්‍රය"
+msgstr "تێرمینال"
 
 #: ../mate-terminal.desktop.in.in.h:3
 msgid "Use the command line"
@@ -58,7 +59,7 @@ msgstr ""
 #: ../src/eggsmclient.c:234 ../src/terminal-options.c:964
 #: ../src/terminal-options.c:973
 msgid "FILE"
-msgstr ""
+msgstr "پەڕگە"
 
 #: ../src/eggsmclient.c:239
 msgid "Specify session management ID"
@@ -66,7 +67,7 @@ msgstr ""
 
 #: ../src/eggsmclient.c:239
 msgid "ID"
-msgstr ""
+msgstr " ناسنامە"
 
 #: ../src/eggsmclient.c:265
 msgid "Session management options:"
@@ -78,7 +79,7 @@ msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:1
 msgid "List of profiles"
-msgstr ""
+msgstr "پێڕستی پرۆفایلەکان"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:2
 msgid ""
@@ -147,7 +148,7 @@ msgstr ""
 #: ../src/org.mate.terminal.gschema.xml.in.h:14
 msgctxt "visible-name"
 msgid "'Default'"
-msgstr ""
+msgstr "'بنەڕەت'"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:15
 msgid "Human-readable name of the profile"
@@ -222,11 +223,11 @@ msgstr ""
 #: ../src/org.mate.terminal.gschema.xml.in.h:29
 msgctxt "title"
 msgid "'Terminal'"
-msgstr ""
+msgstr "'تێرمیناڵ'"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:30
 msgid "Title for terminal"
-msgstr ""
+msgstr "سەردێڕی تێرمیناڵ"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:31
 msgid ""
@@ -545,7 +546,7 @@ msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:94
 msgid "Keyboard shortcut to open a new tab"
-msgstr ""
+msgstr "قەدبڕەکانی تەختەکلیل بۆ کردنەوەی سەرخشتەیەکی نوێ"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:95
 msgid ""
@@ -557,7 +558,7 @@ msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:96
 msgid "Keyboard shortcut to open a new window"
-msgstr ""
+msgstr "قەدبڕی تەختەکلیل بۆ کردنەوەی پەنجەرەیەکی نوێ"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:97
 msgid ""
@@ -593,7 +594,7 @@ msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:102
 msgid "Keyboard shortcut to close a tab"
-msgstr ""
+msgstr "کورتبڕی تەختەکلیل بۆ داخستنی سەرخشتەیەک"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:103
 msgid ""
@@ -605,7 +606,7 @@ msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:104
 msgid "Keyboard shortcut to close a window"
-msgstr ""
+msgstr "کورتبڕی تەختەکلیل بۆ داخستنی پەنجەرەیەک"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:105
 msgid ""
@@ -617,7 +618,7 @@ msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:106
 msgid "Keyboard shortcut to copy text"
-msgstr ""
+msgstr "قەدبڕی تەختەکلیل بۆ لەبەرگرتنەوەی دەق"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:107
 msgid ""
@@ -629,7 +630,7 @@ msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:108
 msgid "Keyboard shortcut to paste text"
-msgstr ""
+msgstr "قەدبڕی تەختەکلیل بۆ لکاندنی دەق"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:109
 msgid ""
@@ -928,7 +929,7 @@ msgstr ""
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:158
 msgid "Keyboard shortcut to launch help"
-msgstr ""
+msgstr "قەدبڕی تەختەکلیل بۆ خستنەکاری یارمەتی"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:159
 msgid ""
@@ -1008,21 +1009,21 @@ msgstr ""
 #: ../src/profile-editor.c:535 ../src/profile-preferences.ui.h:11
 #: ../src/extra-strings.c:80
 msgid "Custom"
-msgstr "රිසිකළ"
+msgstr ""
 
 #: ../src/profile-editor.c:585
 msgid "Images"
-msgstr "පිළිඹිබු"
+msgstr ""
 
 #: ../src/profile-editor.c:729
 #, c-format
 msgid "Choose Palette Color %d"
-msgstr "%d වර්‍ණාවලියෙන් තෝරාගන්නා ලදී"
+msgstr ""
 
 #: ../src/profile-editor.c:733
 #, c-format
 msgid "Palette entry %d"
-msgstr "වර්‍ණාවලි ඇතුලත් කිරීම %d"
+msgstr ""
 
 #: ../src/encodings-dialog.ui.h:1
 msgid "Add or Remove Terminal Encodings"
@@ -1038,11 +1039,11 @@ msgstr ""
 
 #: ../src/find-dialog.ui.h:1
 msgid "Find"
-msgstr "සොයන්න"
+msgstr ""
 
 #: ../src/find-dialog.ui.h:2
 msgid "_Search for:"
-msgstr "සඳහා සොයන්න (_S): "
+msgstr ""
 
 #: ../src/find-dialog.ui.h:3
 msgid "_Match case"
@@ -1058,15 +1059,15 @@ msgstr ""
 
 #: ../src/find-dialog.ui.h:6
 msgid "Search _backwards"
-msgstr "පසුපසට සොයන්න"
+msgstr ""
 
 #: ../src/find-dialog.ui.h:7
 msgid "_Wrap around"
-msgstr "වටා එතුම (_W)"
+msgstr ""
 
 #: ../src/keybinding-editor.ui.h:1
 msgid "Keyboard Shortcuts"
-msgstr "යතුරු පුවරු කෙටි මාර්‍ඟ"
+msgstr "قەدبڕەکانی تەختەکلیل"
 
 #: ../src/keybinding-editor.ui.h:2
 msgid "_Enable menu access keys (such as Alt+F to open the File menu)"
@@ -1078,11 +1079,11 @@ msgstr ""
 
 #: ../src/keybinding-editor.ui.h:4
 msgid "_Shortcut keys:"
-msgstr "කෙටි මාර්‍ග යතුරු: (_S)"
+msgstr ""
 
 #: ../src/profile-manager.ui.h:1
 msgid "Profiles"
-msgstr "පැතිකඩ"
+msgstr ""
 
 #: ../src/profile-manager.ui.h:2
 msgid "_Profile used when launching a new terminal:"
@@ -1090,19 +1091,19 @@ msgstr ""
 
 #: ../src/profile-new-dialog.ui.h:1 ../src/terminal-accels.c:148
 msgid "New Profile"
-msgstr "නව පැතිකඩ"
+msgstr ""
 
 #: ../src/profile-new-dialog.ui.h:2
 msgid "C_reate"
-msgstr "නර්මාණය කරන්න (_r)"
+msgstr ""
 
 #: ../src/profile-new-dialog.ui.h:3
 msgid "Profile _name:"
-msgstr "පැතිකඩ නම (_n):"
+msgstr "ناوی _پرۆفایل\""
 
 #: ../src/profile-new-dialog.ui.h:4
 msgid "_Base on:"
-msgstr "පදනම (_B):"
+msgstr ""
 
 #. Translators: Cursor shape: ...
 #: ../src/profile-preferences.ui.h:1 ../src/extra-strings.c:35
@@ -1142,7 +1143,7 @@ msgstr ""
 #. Translators: When command exits: ...
 #: ../src/profile-preferences.ui.h:8 ../src/extra-strings.c:49
 msgid "Exit the terminal"
-msgstr ""
+msgstr "دەرچوون لە تێرمیناڵ"
 
 #. Translators: When command exits: ...
 #: ../src/profile-preferences.ui.h:9 ../src/extra-strings.c:51
@@ -1157,7 +1158,7 @@ msgstr ""
 #. Translators: This is the name of a colour scheme
 #: ../src/profile-preferences.ui.h:12 ../src/extra-strings.c:72
 msgid "Tango"
-msgstr "Tango"
+msgstr ""
 
 #. Translators: This is the name of a colour scheme
 #: ../src/profile-preferences.ui.h:13 ../src/extra-strings.c:74
@@ -1167,12 +1168,12 @@ msgstr ""
 #. Translators: This is the name of a colour scheme
 #: ../src/profile-preferences.ui.h:14 ../src/extra-strings.c:76
 msgid "XTerm"
-msgstr "XTerm"
+msgstr ""
 
 #. Translators: This is the name of a colour scheme
 #: ../src/profile-preferences.ui.h:15 ../src/extra-strings.c:78
 msgid "Rxvt"
-msgstr "Rxvt"
+msgstr ""
 
 #. Translators: Scrollbar is: ...
 #: ../src/profile-preferences.ui.h:16 ../src/extra-strings.c:56
@@ -1188,7 +1189,7 @@ msgstr ""
 #: ../src/profile-preferences.ui.h:18 ../src/terminal-accels.c:379
 #: ../src/extra-strings.c:60
 msgid "Disabled"
-msgstr "අක්‍රිය"
+msgstr ""
 
 #. * Copyright © 2009 Christian Persch
 #. *
@@ -1249,11 +1250,11 @@ msgstr ""
 
 #: ../src/profile-preferences.ui.h:27
 msgid "Profile Editor"
-msgstr "පැතිකඩ සකසනය"
+msgstr ""
 
 #: ../src/profile-preferences.ui.h:28
 msgid "_Profile name:"
-msgstr "පැතිකඩ නම: (_P)"
+msgstr "_ناوی پرۆفایل:"
 
 #: ../src/profile-preferences.ui.h:29
 msgid "_Use the system fixed width font"
@@ -1261,15 +1262,15 @@ msgstr ""
 
 #: ../src/profile-preferences.ui.h:30
 msgid "_Font:"
-msgstr "අක්‍ෂර: (_F)"
+msgstr ""
 
 #: ../src/profile-preferences.ui.h:31
 msgid "Choose A Terminal Font"
-msgstr "අග්‍රය සඳහා අක්‍ෂර තෝරන්න"
+msgstr ""
 
 #: ../src/profile-preferences.ui.h:32
 msgid "_Allow bold text"
-msgstr "තදකුරු අනුමත කරන්න (_A)"
+msgstr ""
 
 #: ../src/profile-preferences.ui.h:33
 msgid "Show _menubar by default in new terminals"
@@ -1277,7 +1278,7 @@ msgstr ""
 
 #: ../src/profile-preferences.ui.h:34
 msgid "Terminal _bell"
-msgstr "අග්‍රයේ සිනුව (_b)"
+msgstr ""
 
 #: ../src/profile-preferences.ui.h:35
 msgid "Copy selected text into _clipboard"
@@ -1313,15 +1314,15 @@ msgstr ""
 
 #: ../src/profile-preferences.ui.h:43
 msgid "General"
-msgstr "සාමාන්‍ය"
+msgstr ""
 
 #: ../src/profile-preferences.ui.h:44
 msgid "<b>Title</b>"
-msgstr "<b>සිරස්තලය</b>"
+msgstr ""
 
 #: ../src/profile-preferences.ui.h:45
 msgid "Initial _title:"
-msgstr "මුලික සිරස්තලය: (_t)"
+msgstr ""
 
 #: ../src/profile-preferences.ui.h:46
 msgid "When terminal commands set their o_wn titles:"
@@ -1329,7 +1330,7 @@ msgstr ""
 
 #: ../src/profile-preferences.ui.h:47
 msgid "<b>Command</b>"
-msgstr "<b>විධානය</b>"
+msgstr ""
 
 #: ../src/profile-preferences.ui.h:48
 msgid "_Run command as a login shell"
@@ -1353,7 +1354,7 @@ msgstr ""
 
 #: ../src/profile-preferences.ui.h:53
 msgid "Title and Command"
-msgstr "සිරස්තලය සහ විධානය"
+msgstr ""
 
 #: ../src/profile-preferences.ui.h:54
 msgid "<b>Foreground, Background, Bold and Underline</b>"
@@ -1369,19 +1370,19 @@ msgstr ""
 
 #: ../src/profile-preferences.ui.h:57
 msgid "_Text color:"
-msgstr "පෙළ වර්‍ණ: (_T)"
+msgstr ""
 
 #: ../src/profile-preferences.ui.h:58
 msgid "Choose Terminal Background Color"
-msgstr "අග්‍රයේ පසුබිම් වර්‍ණය තෝරන්න"
+msgstr "هەڵبژاردنی ڕەنگی پاشبنەمایی تێرمیناڵ"
 
 #: ../src/profile-preferences.ui.h:59
 msgid "Choose Terminal Text Color"
-msgstr "අග්‍රයේ පසුබිම් පෙළ තෝරන්න"
+msgstr "هەڵبژاردنی ڕەنگی دەق لە تێرمیناڵ"
 
 #: ../src/profile-preferences.ui.h:60
 msgid "_Background color:"
-msgstr "පසුතල  වර්‍ණය: (_B)"
+msgstr ""
 
 #: ../src/profile-preferences.ui.h:61
 msgid "Bol_d color:"
@@ -1397,7 +1398,7 @@ msgstr ""
 
 #: ../src/profile-preferences.ui.h:64
 msgid "<b>Palette</b>"
-msgstr "<b>වර්‍ණාවලිය</b>"
+msgstr ""
 
 #: ../src/profile-preferences.ui.h:65
 msgid "Built-in _schemes:"
@@ -1411,11 +1412,11 @@ msgstr ""
 msgid ""
 "<small><i><b>Note:</b> Terminal applications have these colors available to "
 "them.</i></small>"
-msgstr "<small><i><b>සටහන:</b> අග්‍ර යෙදුම් සඳහා මෙම වර්‍ණ භාවිතයට ඇත.</i></small>"
+msgstr ""
 
 #: ../src/profile-preferences.ui.h:68
 msgid "Colors"
-msgstr "වර්‍ණ"
+msgstr ""
 
 #: ../src/profile-preferences.ui.h:69
 msgid "_Solid color"
@@ -1427,11 +1428,11 @@ msgstr ""
 
 #: ../src/profile-preferences.ui.h:71
 msgid "Image _file:"
-msgstr " පිළිඹිබු ගොනුව: (_f)"
+msgstr ""
 
 #: ../src/profile-preferences.ui.h:72
 msgid "Select Background Image"
-msgstr "පසුබිම් පිළිඹිබුව තෝරන්න"
+msgstr ""
 
 #: ../src/profile-preferences.ui.h:73
 msgid "Background image _scrolls"
@@ -1439,7 +1440,7 @@ msgstr ""
 
 #: ../src/profile-preferences.ui.h:74
 msgid "_Transparent background"
-msgstr "විනිවිද පෙනෙන පසුබිම (_T)"
+msgstr ""
 
 #: ../src/profile-preferences.ui.h:75
 msgid "S_hade transparent or image background:"
@@ -1451,11 +1452,11 @@ msgstr ""
 
 #: ../src/profile-preferences.ui.h:77
 msgid "<small><i>None</i></small>"
-msgstr "<small><i>කිසිවක් නැත</i></small>"
+msgstr ""
 
 #: ../src/profile-preferences.ui.h:78
 msgid "<small><i>Maximum</i></small>"
-msgstr "<small><i>උපරිම</i></small>"
+msgstr ""
 
 #: ../src/profile-preferences.ui.h:79
 msgid "Background"
@@ -1511,7 +1512,7 @@ msgstr ""
 
 #: ../src/profile-preferences.ui.h:91
 msgid "Compatibility"
-msgstr "අනුකුලතාව"
+msgstr ""
 
 #: ../src/skey-challenge.ui.h:1
 msgid "S/Key Challenge Response"
@@ -1519,7 +1520,7 @@ msgstr ""
 
 #: ../src/skey-challenge.ui.h:2
 msgid "_Password:"
-msgstr "_රහස්‍ය පදය"
+msgstr ""
 
 #: ../src/skey-popup.c:165
 msgid "The text you clicked on doesn't seem to be a valid S/Key challenge."
@@ -1531,63 +1532,63 @@ msgstr ""
 
 #: ../src/terminal-accels.c:140
 msgid "New Tab"
-msgstr "නව පටිත්ත"
+msgstr ""
 
 #: ../src/terminal-accels.c:144
 msgid "New Window"
-msgstr "නව කවුළුව"
+msgstr ""
 
 #: ../src/terminal-accels.c:153
 msgid "Save Contents"
-msgstr ""
+msgstr "پاشەکەوتکردنی ناوەرۆکەکان"
 
 #: ../src/terminal-accels.c:158
 msgid "Close Tab"
-msgstr "පටිත්ත වසන්න"
+msgstr "داخستنی سەرخشتە"
 
 #: ../src/terminal-accels.c:162
 msgid "Close Window"
-msgstr "කවුළුව වසන්න"
+msgstr "داخستنی پەنجەرە"
 
 #: ../src/terminal-accels.c:170
 msgid "Copy"
-msgstr "පිටපත් කරන්න"
+msgstr "لەبەرگرتنەوە"
 
 #: ../src/terminal-accels.c:174
 msgid "Paste"
-msgstr "අලවන්න"
+msgstr "لکاندن"
 
 #: ../src/terminal-accels.c:182
 msgid "Hide and Show menubar"
-msgstr "මෙනු බාරය සඟවන්න සහ පෙන්වන්න"
+msgstr ""
 
 #: ../src/terminal-accels.c:186
 msgid "Full Screen"
-msgstr "සම්පූර්ණ තිරය"
+msgstr ""
 
 #: ../src/terminal-accels.c:190
 msgid "Zoom In"
-msgstr "විශාල කරන්න"
+msgstr ""
 
 #: ../src/terminal-accels.c:194
 msgid "Zoom Out"
-msgstr "කුඩා කරන්න"
+msgstr ""
 
 #: ../src/terminal-accels.c:198
 msgid "Normal Size"
-msgstr "සාමාන්‍ය ප්‍රමාණය"
+msgstr "قەبارەی ئاسایی"
 
 #: ../src/terminal-accels.c:206 ../src/terminal-window.c:4122
 msgid "Set Title"
-msgstr "සිරස්තලය සකසන්න"
+msgstr "دانانی سەردێڕ"
 
 #: ../src/terminal-accels.c:210
 msgid "Reset"
-msgstr "මුල් තත්වයට සකසන්න"
+msgstr ""
 
 #: ../src/terminal-accels.c:214
 msgid "Reset and Clear"
-msgstr "මුල් තත්වයට සකසා පැහැදිලි කරන්න"
+msgstr ""
 
 #: ../src/terminal-accels.c:218
 msgid "Switch to Previous Profile"
@@ -1599,95 +1600,95 @@ msgstr ""
 
 #: ../src/terminal-accels.c:230
 msgid "Switch to Previous Tab"
-msgstr "පෙර සිටි පටිත්තට මාරු වන්න"
+msgstr ""
 
 #: ../src/terminal-accels.c:234
 msgid "Switch to Next Tab"
-msgstr "මීලඟ පටිත්තට මාරු වන්න"
+msgstr ""
 
 #: ../src/terminal-accels.c:238
 msgid "Move Tab to the Left"
-msgstr "පටිත්ත වමට ගෙනි යන්න"
+msgstr "جوڵاندنی سەرخشتە بۆ لای چەپ"
 
 #: ../src/terminal-accels.c:242
 msgid "Move Tab to the Right"
-msgstr "පටිත්ත දකුණට ගෙනි යන්න"
+msgstr "جوڵاندنی سەرخشتە بۆ لای ڕاست"
 
 #: ../src/terminal-accels.c:246
 msgid "Detach Tab"
-msgstr "පටිත්ත වෙන් කරන්න"
+msgstr ""
 
 #: ../src/terminal-accels.c:250
 msgid "Switch to Tab 1"
-msgstr "1 වන  පටිත්තට මාරු වන්න"
+msgstr ""
 
 #: ../src/terminal-accels.c:255
 msgid "Switch to Tab 2"
-msgstr "2 වන  පටිත්තට මාරු වන්න"
+msgstr ""
 
 #: ../src/terminal-accels.c:260
 msgid "Switch to Tab 3"
-msgstr "3 වන  පටිත්තට මාරු වන්න"
+msgstr ""
 
 #: ../src/terminal-accels.c:265
 msgid "Switch to Tab 4"
-msgstr "4 වන  පටිත්තට මාරු වන්න"
+msgstr ""
 
 #: ../src/terminal-accels.c:270
 msgid "Switch to Tab 5"
-msgstr "5 වන  පටිත්තට මාරු වන්න"
+msgstr ""
 
 #: ../src/terminal-accels.c:275
 msgid "Switch to Tab 6"
-msgstr "6 වන  පටිත්තට මාරු වන්න"
+msgstr ""
 
 #: ../src/terminal-accels.c:280
 msgid "Switch to Tab 7"
-msgstr "7 වන  පටිත්තට මාරු වන්න"
+msgstr ""
 
 #: ../src/terminal-accels.c:285
 msgid "Switch to Tab 8"
-msgstr "8 වන  පටිත්තට මාරු වන්න"
+msgstr ""
 
 #: ../src/terminal-accels.c:290
 msgid "Switch to Tab 9"
-msgstr "9 වන  පටිත්තට මාරු වන්න"
+msgstr ""
 
 #: ../src/terminal-accels.c:295
 msgid "Switch to Tab 10"
-msgstr "10 වන  පටිත්තට මාරු වන්න"
+msgstr ""
 
 #: ../src/terminal-accels.c:300
 msgid "Switch to Tab 11"
-msgstr "11 වන  පටිත්තට මාරු වන්න"
+msgstr ""
 
 #: ../src/terminal-accels.c:305
 msgid "Switch to Tab 12"
-msgstr "12 වන  පටිත්තට මාරු වන්න"
+msgstr ""
 
 #: ../src/terminal-accels.c:313
 msgid "Contents"
-msgstr "අන්තර්ගතයන්"
+msgstr "ناوەڕۆکەکان"
 
 #: ../src/terminal-accels.c:318
 msgid "File"
-msgstr "ගොනු"
+msgstr "پەرگە"
 
 #: ../src/terminal-accels.c:319
 msgid "Edit"
-msgstr "සැකසුම්"
+msgstr "دەستکاریکردن"
 
 #: ../src/terminal-accels.c:320
 msgid "View"
-msgstr "දසුන"
+msgstr "بینین"
 
 #: ../src/terminal-accels.c:322
 msgid "Tabs"
-msgstr ""
+msgstr "سەرخشتەکان"
 
 #: ../src/terminal-accels.c:323
 msgid "Help"
-msgstr "උදව්"
+msgstr "یارمەتی"
 
 #: ../src/terminal-accels.c:826
 #, c-format
@@ -1696,19 +1697,19 @@ msgstr ""
 
 #: ../src/terminal-accels.c:982
 msgid "_Action"
-msgstr "ක්‍රියාව (_A)"
+msgstr ""
 
 #: ../src/terminal-accels.c:1001
 msgid "Shortcut _Key"
-msgstr "කෙටි මාර්‍ග යතුරු (_K)"
+msgstr ""
 
 #: ../src/terminal-app.c:542
 msgid "Click button to choose profile"
-msgstr "පැතිකඩක් තෝරා ගැනිමට බොත්තම මත ක්ලික් කරන්න"
+msgstr ""
 
 #: ../src/terminal-app.c:625
 msgid "Profile list"
-msgstr "පැතිකඩ ලැයිස්තුව"
+msgstr ""
 
 #: ../src/terminal-app.c:686
 #, c-format
@@ -1717,7 +1718,7 @@ msgstr ""
 
 #: ../src/terminal-app.c:699
 msgid "Delete Profile"
-msgstr "පැතිකඩ මකන්න"
+msgstr ""
 
 #: ../src/terminal-app.c:1146
 #, c-format
@@ -1728,7 +1729,7 @@ msgstr ""
 
 #: ../src/terminal-app.c:1241
 msgid "Choose base profile"
-msgstr "මුලීක පැතිකඩ තෝරන්න"
+msgstr ""
 
 #: ../src/terminal-app.c:1829
 #, c-format
@@ -1742,7 +1743,7 @@ msgstr ""
 
 #: ../src/terminal-app.c:2062
 msgid "User Defined"
-msgstr "පරිශීලක විසින් සඳහන් කරන ලඳ"
+msgstr ""
 
 #: ../src/terminal.c:582
 #, c-format
@@ -1753,63 +1754,63 @@ msgstr ""
 #: ../src/terminal-encoding.c:80 ../src/terminal-encoding.c:102
 #: ../src/terminal-encoding.c:113
 msgid "Western"
-msgstr "බටහිර"
+msgstr "خۆرئاوایی"
 
 #: ../src/terminal-encoding.c:54 ../src/terminal-encoding.c:81
 #: ../src/terminal-encoding.c:92 ../src/terminal-encoding.c:111
 msgid "Central European"
-msgstr "මධ්‍යම යුරෝපීය"
+msgstr "ئەوڕوپایی ناوەڕاست"
 
 #: ../src/terminal-encoding.c:55
 msgid "South European"
-msgstr "දකුණු  යුරෝපීය"
+msgstr "ئەوڕوپایی باشوور"
 
 #: ../src/terminal-encoding.c:56 ../src/terminal-encoding.c:64
 #: ../src/terminal-encoding.c:118
 msgid "Baltic"
-msgstr "බොල්ටික්"
+msgstr ""
 
 #: ../src/terminal-encoding.c:57 ../src/terminal-encoding.c:82
 #: ../src/terminal-encoding.c:88 ../src/terminal-encoding.c:89
 #: ../src/terminal-encoding.c:94 ../src/terminal-encoding.c:112
 msgid "Cyrillic"
-msgstr "සයිරිලීක"
+msgstr ""
 
 #: ../src/terminal-encoding.c:58 ../src/terminal-encoding.c:85
 #: ../src/terminal-encoding.c:91 ../src/terminal-encoding.c:117
 msgid "Arabic"
-msgstr "අරාබී"
+msgstr "عەرەبی"
 
 #: ../src/terminal-encoding.c:59 ../src/terminal-encoding.c:97
 #: ../src/terminal-encoding.c:114
 msgid "Greek"
-msgstr "ග්‍රීක"
+msgstr "یۆنانی"
 
 #: ../src/terminal-encoding.c:60
 msgid "Hebrew Visual"
-msgstr "හෙබ්රුව් දෘශ්‍ය"
+msgstr ""
 
 #: ../src/terminal-encoding.c:61 ../src/terminal-encoding.c:84
 #: ../src/terminal-encoding.c:100 ../src/terminal-encoding.c:116
 msgid "Hebrew"
-msgstr "හෙබ්රුව්"
+msgstr "عیبری"
 
 #: ../src/terminal-encoding.c:62 ../src/terminal-encoding.c:83
 #: ../src/terminal-encoding.c:104 ../src/terminal-encoding.c:115
 msgid "Turkish"
-msgstr "තුර්කි"
+msgstr "تورکی"
 
 #: ../src/terminal-encoding.c:63
 msgid "Nordic"
-msgstr "නොර්ඩික්"
+msgstr ""
 
 #: ../src/terminal-encoding.c:65
 msgid "Celtic"
-msgstr "සෙල්ටික්"
+msgstr ""
 
 #: ../src/terminal-encoding.c:67 ../src/terminal-encoding.c:103
 msgid "Romanian"
-msgstr "රෝමානු"
+msgstr "ڕۆمانی"
 
 #. These encodings do NOT pass-through ASCII, so are always rejected.
 #. * FIXME: why are they in this table; or rather why do we need
@@ -1818,80 +1819,80 @@ msgstr "රෝමානු"
 #: ../src/terminal-encoding.c:126 ../src/terminal-encoding.c:127
 #: ../src/terminal-encoding.c:128
 msgid "Unicode"
-msgstr "යුනිකේත"
+msgstr "یونیکۆد"
 
 #: ../src/terminal-encoding.c:69
 msgid "Armenian"
-msgstr "ඇමරිකානු"
+msgstr "ئەرمەنی"
 
 #: ../src/terminal-encoding.c:70 ../src/terminal-encoding.c:71
 #: ../src/terminal-encoding.c:75
 msgid "Chinese Traditional"
-msgstr "සම්ප්‍රදායික චීන"
+msgstr "چینی نەریتی"
 
 #: ../src/terminal-encoding.c:72
 msgid "Cyrillic/Russian"
-msgstr "සයිරිලීක/රුසියානු"
+msgstr ""
 
 #: ../src/terminal-encoding.c:73 ../src/terminal-encoding.c:86
 #: ../src/terminal-encoding.c:106
 msgid "Japanese"
-msgstr "ජපන්"
+msgstr "ژاپۆنی"
 
 #: ../src/terminal-encoding.c:74 ../src/terminal-encoding.c:87
 #: ../src/terminal-encoding.c:109 ../src/terminal-encoding.c:129
 msgid "Korean"
-msgstr "කොරියානු"
+msgstr "کۆری"
 
 #: ../src/terminal-encoding.c:76 ../src/terminal-encoding.c:77
 #: ../src/terminal-encoding.c:78
 msgid "Chinese Simplified"
-msgstr "සරලවු චීන"
+msgstr "چینی ساناکراو"
 
 #: ../src/terminal-encoding.c:79
 msgid "Georgian"
-msgstr "ජොර්ජියානු"
+msgstr "جۆرجی"
 
 #: ../src/terminal-encoding.c:90 ../src/terminal-encoding.c:105
 msgid "Cyrillic/Ukrainian"
-msgstr "සයිරිලීක/යුක්රේනියානු"
+msgstr ""
 
 #: ../src/terminal-encoding.c:93
 msgid "Croatian"
-msgstr "ක්‍රොයේෂියානු"
+msgstr "کڕواتی"
 
 #: ../src/terminal-encoding.c:95
 msgid "Hindi"
-msgstr "හින්දි"
+msgstr "هیندی"
 
 #: ../src/terminal-encoding.c:96
 msgid "Persian"
-msgstr "පර්සියානු"
+msgstr "فارسی"
 
 #: ../src/terminal-encoding.c:98
 msgid "Gujarati"
-msgstr "ගුජරාති"
+msgstr "گوجاراتی"
 
 #: ../src/terminal-encoding.c:99
 msgid "Gurmukhi"
-msgstr "ගර්මුකී"
+msgstr ""
 
 #: ../src/terminal-encoding.c:101
 msgid "Icelandic"
-msgstr "අයිස්ලන්ත"
+msgstr "ئایسلەندی"
 
 #: ../src/terminal-encoding.c:107 ../src/terminal-encoding.c:110
 #: ../src/terminal-encoding.c:119
 msgid "Vietnamese"
-msgstr "වියත්නාම"
+msgstr "ڤێتنامی"
 
 #: ../src/terminal-encoding.c:108
 msgid "Thai"
-msgstr "තායී"
+msgstr "تایلەندی"
 
 #: ../src/terminal-encoding.c:506 ../src/terminal-encoding.c:531
 msgid "_Description"
-msgstr "විස්තරය (_D)"
+msgstr ""
 
 #: ../src/terminal-encoding.c:515 ../src/terminal-encoding.c:540
 msgid "_Encoding"
@@ -1899,7 +1900,7 @@ msgstr ""
 
 #: ../src/terminal-encoding.c:598
 msgid "Current Locale"
-msgstr "දැනට ඇති පෙදෙසිය"
+msgstr ""
 
 #: ../src/terminal-options.c:176
 #, c-format
@@ -1998,7 +1999,7 @@ msgstr ""
 
 #: ../src/terminal-options.c:1047
 msgid "GEOMETRY"
-msgstr "GEOMETRY"
+msgstr ""
 
 #: ../src/terminal-options.c:1055
 msgid "Set the window role"
@@ -2006,7 +2007,7 @@ msgstr ""
 
 #: ../src/terminal-options.c:1056
 msgid "ROLE"
-msgstr "ROLE"
+msgstr ""
 
 #: ../src/terminal-options.c:1064
 msgid "Set the last specified tab as the active one in its window"
@@ -2022,7 +2023,7 @@ msgstr ""
 
 #: ../src/terminal-options.c:1088
 msgid "PROFILE-NAME"
-msgstr ""
+msgstr "ناوی-پرۆفایل"
 
 #: ../src/terminal-options.c:1096
 msgid "Set the terminal title"
@@ -2030,7 +2031,7 @@ msgstr ""
 
 #: ../src/terminal-options.c:1097
 msgid "TITLE"
-msgstr "TITLE"
+msgstr "سەردێڕ"
 
 #: ../src/terminal-options.c:1105
 msgid "Set the working directory"
@@ -2038,11 +2039,11 @@ msgstr ""
 
 #: ../src/terminal-options.c:1106
 msgid "DIRNAME"
-msgstr "DIRNAME"
+msgstr ""
 
 #: ../src/terminal-options.c:1114
 msgid "Set the terminal's zoom factor (1.0 = normal size)"
-msgstr "අග්‍රයේ විශාලණ සාධකය සකසන්න (1.0 = සාමාන්‍ය ප්‍රමාණය"
+msgstr ""
 
 #: ../src/terminal-options.c:1115
 msgid "ZOOM"
@@ -2088,7 +2089,7 @@ msgstr ""
 
 #: ../src/terminal-profile.c:168
 msgid "Unnamed"
-msgstr ""
+msgstr "ناو نەنراو"
 
 #: ../src/terminal-screen.c:1458
 msgid "_Profile Preferences"
@@ -2118,7 +2119,7 @@ msgstr ""
 
 #: ../src/terminal-tab-label.c:137
 msgid "Close tab"
-msgstr "පටිත්ත වසන්න"
+msgstr "داخستنی سەرخشتە"
 
 #: ../src/terminal-tabs-menu.c:198
 msgid "Switch to this tab"
@@ -2162,7 +2163,7 @@ msgstr ""
 #: ../src/terminal-window.c:664
 #, c-format
 msgid "_%d. %s"
-msgstr "_%d. %s"
+msgstr ""
 
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%c is used as the accelerator (it will be a character between A and Z),
@@ -2170,46 +2171,46 @@ msgstr "_%d. %s"
 #: ../src/terminal-window.c:670
 #, c-format
 msgid "_%c. %s"
-msgstr "_%c. %s"
+msgstr ""
 
 #. Toplevel
 #: ../src/terminal-window.c:1856
 msgid "_File"
-msgstr "ගොනු (_F)"
+msgstr "_پەڕگە"
 
 #: ../src/terminal-window.c:1857 ../src/terminal-window.c:1870
 #: ../src/terminal-window.c:2111
 msgid "Open _Terminal"
-msgstr "අග්‍රය විවෘත කරන්න (_T)"
+msgstr "کردنەوەی _تێرمیناڵ"
 
 #: ../src/terminal-window.c:1858 ../src/terminal-window.c:1875
 #: ../src/terminal-window.c:2116
 msgid "Open Ta_b"
-msgstr "පටිත්ත විවෘත කරන්න (_b)"
+msgstr "کردنەوەی سەرخشت_ە"
 
 #: ../src/terminal-window.c:1859
 msgid "_Edit"
-msgstr "සැකසුම් (_E)"
+msgstr "_دەستکاری"
 
 #: ../src/terminal-window.c:1860
 msgid "_View"
-msgstr "දසුන (_V)"
+msgstr "_بینین"
 
 #: ../src/terminal-window.c:1861
 msgid "_Search"
-msgstr "සොයන්න (_S)"
+msgstr "_گەڕان"
 
 #: ../src/terminal-window.c:1862
 msgid "_Terminal"
-msgstr "අග්‍රය (_T)"
+msgstr "_تێرمیناڵ"
 
 #: ../src/terminal-window.c:1863
 msgid "Ta_bs"
-msgstr "පටිති (_b)"
+msgstr "سەرخش_تەکان"
 
 #: ../src/terminal-window.c:1864
 msgid "_Help"
-msgstr "උදව් (_H)"
+msgstr "_یارمەتی"
 
 #: ../src/terminal-window.c:1880
 msgid "New _Profile…"
@@ -2217,15 +2218,15 @@ msgstr ""
 
 #: ../src/terminal-window.c:1885
 msgid "_Save Contents"
-msgstr ""
+msgstr "_پاشەکەوتکردنی ناوەڕۆکەکان"
 
 #: ../src/terminal-window.c:1890 ../src/terminal-window.c:2126
 msgid "C_lose Tab"
-msgstr "පටිත්ත වසන්න (_l)"
+msgstr "د_اخستنی سەرخشتە"
 
 #: ../src/terminal-window.c:1895
 msgid "_Close Window"
-msgstr "කවුළුව වසන්න (_C)"
+msgstr "_داخستنی پەنجەرە"
 
 #: ../src/terminal-window.c:1912 ../src/terminal-window.c:2106
 msgid "Paste _Filenames"
@@ -2237,7 +2238,7 @@ msgstr ""
 
 #: ../src/terminal-window.c:1927
 msgid "_Keyboard Shortcuts…"
-msgstr ""
+msgstr "_قەدبڕەکانی تەختەکلیل..."
 
 #: ../src/terminal-window.c:1932
 msgid "Pr_ofile Preferences"
@@ -2245,15 +2246,15 @@ msgstr ""
 
 #: ../src/terminal-window.c:1956
 msgid "_Find..."
-msgstr "සොයන්න... (_F)"
+msgstr "_دۆزینەوە..."
 
 #: ../src/terminal-window.c:1961
 msgid "Find Ne_xt"
-msgstr "මීළඟ සෙවුම (_x)"
+msgstr ""
 
 #: ../src/terminal-window.c:1966
 msgid "Find Pre_vious"
-msgstr "පෙර සෙවුම (_x)"
+msgstr ""
 
 #: ../src/terminal-window.c:1971
 msgid "_Clear Highlight"
@@ -2270,7 +2271,7 @@ msgstr ""
 #. Terminal menu
 #: ../src/terminal-window.c:1989
 msgid "Change _Profile"
-msgstr "දැනට ඇති පැතිකඩ (_P)"
+msgstr ""
 
 #: ../src/terminal-window.c:1991
 msgid "_Previous Profile"
@@ -2282,31 +2283,31 @@ msgstr ""
 
 #: ../src/terminal-window.c:2001
 msgid "_Set Title…"
-msgstr ""
+msgstr "_دانانی سەردێڕ..."
 
 #: ../src/terminal-window.c:2005
 msgid "Set _Character Encoding"
-msgstr "අක්‍ෂර කේතාංකන සකසන්න (_C) "
+msgstr ""
 
 #: ../src/terminal-window.c:2007
 msgid "_Reset"
-msgstr "ප්‍රකෘති තත්වයට සකසන්න (_R)"
+msgstr ""
 
 #: ../src/terminal-window.c:2012
 msgid "Reset and C_lear"
-msgstr "ප්‍රකෘති තත්වයට සකසන්න සහ පැහැදිලි කරන්න (_l)"
+msgstr ""
 
 #: ../src/terminal-window.c:2019
 msgid "_Add or Remove…"
-msgstr ""
+msgstr "_زیادکردن یان لابردن"
 
 #: ../src/terminal-window.c:2026
 msgid "_Previous Tab"
-msgstr "පෙර භාවිතා කළ පටිත්ත (_P)"
+msgstr "_سەرخشتەی پێشوو"
 
 #: ../src/terminal-window.c:2031
 msgid "_Next Tab"
-msgstr "මීලඟ පටිත්ත (_N)"
+msgstr "_سەرخشتەی دواتر"
 
 #: ../src/terminal-window.c:2036
 msgid "Move Tab _Left"
@@ -2322,19 +2323,19 @@ msgstr ""
 
 #: ../src/terminal-window.c:2053
 msgid "_Contents"
-msgstr "අන්තර්ගත (_C)"
+msgstr "_ناوەڕۆک"
 
 #: ../src/terminal-window.c:2058
 msgid "_About"
-msgstr "සම්බන්දව (_A)"
+msgstr "_دەربارە"
 
 #: ../src/terminal-window.c:2065
 msgid "_Send Mail To…"
-msgstr ""
+msgstr "_ناردنی نامە بۆ..."
 
 #: ../src/terminal-window.c:2070
 msgid "_Copy E-mail Address"
-msgstr "ඉලෙක්ට්‍රොනික තැපැල් ලිපිනය පිටපත් කරන්න (_C)"
+msgstr ""
 
 #: ../src/terminal-window.c:2075
 msgid "C_all To…"
@@ -2346,11 +2347,11 @@ msgstr ""
 
 #: ../src/terminal-window.c:2085
 msgid "_Open Link"
-msgstr "පුරුක විවෘත කරන්න (_O)"
+msgstr "_کردنەوەی بەرستەر"
 
 #: ../src/terminal-window.c:2090
 msgid "_Copy Link Address"
-msgstr "පුරුක් ලිපිනය පිටපත් කරන්න (_C)"
+msgstr ""
 
 #: ../src/terminal-window.c:2094
 msgid "P_rofiles"
@@ -2358,7 +2359,7 @@ msgstr ""
 
 #: ../src/terminal-window.c:2121 ../src/terminal-window.c:3530
 msgid "C_lose Window"
-msgstr "කවුළුව වසන්න (_l)"
+msgstr ""
 
 #: ../src/terminal-window.c:2131
 msgid "L_eave Full Screen"
@@ -2366,15 +2367,15 @@ msgstr ""
 
 #: ../src/terminal-window.c:2135
 msgid "_Input Methods"
-msgstr "ඇතුලත් කිරීමේ ආකාර (_I)"
+msgstr ""
 
 #: ../src/terminal-window.c:2142
 msgid "Show _Menubar"
-msgstr "මෙනු බාරය පෙන් වන්න (_M)"
+msgstr ""
 
 #: ../src/terminal-window.c:2148
 msgid "_Full Screen"
-msgstr "සම්පූර්ණ තිරය (_F)"
+msgstr ""
 
 #: ../src/terminal-window.c:3517
 msgid "Close this window?"
@@ -2382,7 +2383,7 @@ msgstr ""
 
 #: ../src/terminal-window.c:3517
 msgid "Close this terminal?"
-msgstr ""
+msgstr "داخستنی ئەم تێرمیناڵە؟"
 
 #: ../src/terminal-window.c:3521
 msgid ""
@@ -2398,7 +2399,7 @@ msgstr ""
 
 #: ../src/terminal-window.c:3530
 msgid "C_lose Terminal"
-msgstr ""
+msgstr "د_اخستنی تێرمیناڵ"
 
 #: ../src/terminal-window.c:3596
 msgid "Could not save contents"
@@ -2406,11 +2407,11 @@ msgstr ""
 
 #: ../src/terminal-window.c:3620
 msgid "Save as..."
-msgstr ""
+msgstr "پاشەکەوتکردن وەک..."
 
 #: ../src/terminal-window.c:4139
 msgid "_Title:"
-msgstr "සිරස්තලය: (_T)"
+msgstr "_سەردێڕ:"
 
 #: ../src/terminal-window.c:4328
 msgid "Contributors:"
@@ -2422,4 +2423,4 @@ msgstr ""
 
 #: ../src/terminal-window.c:4354
 msgid "translator-credits"
-msgstr "Danishka Navin <danishka@gmail.com>"
+msgstr ""

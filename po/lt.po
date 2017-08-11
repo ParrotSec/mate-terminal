@@ -5,13 +5,13 @@
 # Translators:
 # Audrius Meskauskas, 2015
 # brennus <jonas.ska@gmail.com>, 2014
-# Moo, 2014-2016
+# Moo, 2014-2017
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-26 15:55+0300\n"
-"PO-Revision-Date: 2016-09-19 10:58+0000\n"
+"POT-Creation-Date: 2016-12-06 01:12+0300\n"
+"PO-Revision-Date: 2017-03-16 10:20+0000\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian (http://www.transifex.com/mate/MATE/language/lt/)\n"
 "MIME-Version: 1.0\n"
@@ -36,13 +36,13 @@ msgid ""
 msgstr "<p> MATE Terminalas yra terminalo emuliavimo programa, kurią galite naudoti, norėdami pasiekti UNIX apvalkalą MATE aplinkoje. MATE Terminalas emuliuoja, X Konsorciumo sukurtą, programą xterm. Ji palaiko skaidriuosius fonus, kelių terminalų atvėrimą viename lange (korteles) ir daugiasaičius URL. </p> <p> MATE Terminalas yra GNOME Terminalo atšaka ir MATE Darbalaukio Aplinkos dalis. Jeigu jūs norėtumėte daugiau sužinoti apie MATE ir MATE Terminalą, prašome aplankyti projekto internetinę svetainę. </p>"
 
 #: ../mate-terminal.desktop.in.in.h:1 ../src/terminal-options.c:189
-#: ../src/terminal-window.c:3955
+#: ../src/terminal-window.c:4345
 msgid "MATE Terminal"
 msgstr "MATE terminalas"
 
 #: ../mate-terminal.desktop.in.in.h:2 ../src/terminal-accels.c:321
 #: ../src/terminal.c:587 ../src/terminal-profile.c:161
-#: ../src/terminal-window.c:1998
+#: ../src/terminal-window.c:2185
 msgid "Terminal"
 msgstr "Terminalas"
 
@@ -73,11 +73,11 @@ msgstr "ID"
 
 #: ../src/eggsmclient.c:265
 msgid "Session management options:"
-msgstr "Seanso valdymo parinktys:"
+msgstr "Seanso valdymo parametrai:"
 
 #: ../src/eggsmclient.c:266
 msgid "Show session management options"
-msgstr "Rodyti seanso valdymo parinktis"
+msgstr "Rodyti seanso valdymo parametrus"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:1
 msgid "List of profiles"
@@ -111,8 +111,8 @@ msgid ""
 msgstr "Ar naudoti Alt-raidė sparčiuosius klavišus tarp meniu. Šie spartieji klavišai gali sutrikdyti dalies programų, paleistų terminale darbą, todėl galima juos išjungti."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:7
-msgid "Whether the standard GTK shortcut for menubar access is enabled"
-msgstr "Ar įjungtas standartinis GTK klavišų susiejimas prieigai prie meniu juostos"
+msgid "Whether the standard GTK+ shortcut for menubar access is enabled"
+msgstr "Ar įjungta standartinė GTK+ meniu prieigos klavišų kombinacija"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:8
 msgid ""
@@ -220,7 +220,7 @@ msgid ""
 "have their shell set up to do this), the dynamically-set title can erase the"
 " configured title, go before it, go after it, or replace it. The possible "
 "values are \"replace\", \"before\", \"after\", and \"ignore\"."
-msgstr "Jei programa terminale nustato antraštę (paprastai tai apliekama aplinkos nustatymuose), kintama antraštė gali pašalinti nustatytą lango antraštę, būti įrašyta prieš ją, eiti po jos arba ją pakeisti. Galimos reikšmės yra \"replace\", \"before\", \"after\", ir \"ignore\"."
+msgstr "Jei programa terminale nustato antraštę (paprastai tai atliekama apvalkalo nustatymuose), kintama antraštė gali pašalinti nustatytą lango antraštę, būti įrašyta prieš ją, eiti po jos arba ją pakeisti. Galimos reikšmės yra \"replace\", \"before\", \"after\", ir \"ignore\"."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:29
 msgctxt "title"
@@ -366,13 +366,13 @@ msgstr "Galimos reikšmės yra „close“ (užveria terminalą) ir „restart�
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:58
 msgid "Whether to launch the command in the terminal as a login shell"
-msgstr "Ar paleisti programą terminale naudojant prisijungimo aplinkos parametrus"
+msgstr "Ar paleisti programą terminale kaip prisijungimo apvalkalą"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:59
 msgid ""
 "If true, the command inside the terminal will be launched as a login shell. "
 "(argv[0] will have a hyphen in front of it.)"
-msgstr "Jei teigiama, terminale paleista komanda naudos prisijungimo aplinkos nustatymus (prieš argv[0] bus įrašytas minusas)."
+msgstr "Jei teigiama, terminale vykdoma komanda bus paleista kaip prisijungimo apvalkalas (prieš argv[0] bus įrašytas brūkšnelis)."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:60
 msgid "Whether to update login records when launching terminal command"
@@ -386,13 +386,13 @@ msgstr "Jei teigiama, sistemos prisijungimo įrašai utmp ir wtmp bus atnaujinti
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:62
 msgid "Whether to run a custom command instead of the shell"
-msgstr "Paleisti kitą komandą vietoj įprastos aplinkos"
+msgstr "Ar paleisti pasirinktinę komandą vietoj apvalkalo"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:63
 msgid ""
 "If true, the value of the custom_command setting will be used in place of "
 "running a shell."
-msgstr "Jei teigiama, custom_command nustatymo reikšmė bus panaudota vietoj darbinės aplinkos."
+msgstr "Jei teigiama, custom_command nustatymo reikšmė bus panaudota vietoj vykdomo apvalkalo."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:64
 msgid "Whether to blink the cursor"
@@ -416,11 +416,11 @@ msgstr "Galimos vertės: „block“ – naudoti blokinį žymeklį, „ibeam“
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:68
 msgid "Custom command to use instead of the shell"
-msgstr "Komanda naudojama vietoj standartinės aplinkos"
+msgstr "Pasirinktinė komanda naudojama vietoj apvalkalo"
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:69
 msgid "Run this command in place of the shell, if use_custom_command is true."
-msgstr "Jei use_custom_command reikšmė yra teigiama, naudoti šią komandą vietoj įprastos aplinkos."
+msgstr "Jei use_custom_command reikšmė yra teigiama, naudoti šią komandą vietoj apvalkalo."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:70
 msgid "Icon for terminal window"
@@ -556,7 +556,7 @@ msgid ""
 "same format used for GTK+ resource files. If you set the option to the "
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
-msgstr "Klavišų kombinacija, atveriantis naują kortelę. Nurodomas tuo pačiu formatu kaip GTK+ resursų failuose. Jei nustatoma speciali seka „disabled“, su veiksmu nebus susieta jokia klavišų kombinacija."
+msgstr "Klavišų kombinacija, atverianti naują kortelę. Nurodoma tuo pačiu formatu kaip GTK+ resursų failuose. Jei nustatoma speciali seka „disabled“, su veiksmu nebus susieta jokia klavišų kombinacija."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:96
 msgid "Keyboard shortcut to open a new window"
@@ -568,7 +568,7 @@ msgid ""
 " same format used for GTK+ resource files. If you set the option to the "
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
-msgstr "Klavišų kombinacija, atveriantis naują langą. Nurodomas tuo pačiu formatu kaip GTK+ resursų failuose. Jei nustatoma speciali seka „disabled“, su veiksmu nebus susieta jokia klavišų kombinacija."
+msgstr "Klavišų kombinacija, atverianti naują langą. Nurodoma tuo pačiu formatu kaip GTK+ resursų failuose. Jei nustatoma speciali seka „disabled“, su veiksmu nebus susieta jokia klavišų kombinacija."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:98
 msgid "Keyboard shortcut to create a new profile"
@@ -580,7 +580,7 @@ msgid ""
 "Expressed as a string in the same format used for GTK+ resource files. If "
 "you set the option to the special string \"disabled\", then there will be no"
 " keyboard shortcut for this action."
-msgstr "Klavišų kombinacija, iškviečianti profilio kūrimo langą. Nurodomas tuo pačiu formatu kaip GTK+ resursų failuose. Jei nustatoma speciali seka „disabled“, su veiksmu nebus susieta jokia klavišų kombinacija."
+msgstr "Klavišų kombinacija, iškviečianti profilio kūrimo langą. Nurodoma tuo pačiu formatu kaip GTK+ resursų failuose. Jei nustatoma speciali seka „disabled“, su veiksmu nebus susieta jokia klavišų kombinacija."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:100
 msgid "Keyboard shortcut to save the current tab contents to file"
@@ -592,7 +592,7 @@ msgid ""
 "as a string in the same format used for GTK+ resource files. If you set the "
 "option to the special string \"disabled\", then there will be no keyboard "
 "shortcut for this action."
-msgstr "Klavišų kombinacija, įrašanti kortelės turinį į failą. Nurodomas tuo pačiu formatu kaip GTK+ resursų failuose. Jei nustatoma speciali seka \"disabled\", su veiksmu nebus susieta jokia klavišų kombinacija."
+msgstr "Klavišų kombinacija, įrašanti kortelės turinį į failą. Nurodoma tuo pačiu formatu kaip GTK+ resursų failuose. Jei nustatoma speciali seka \"disabled\", su veiksmu nebus susieta jokia klavišų kombinacija."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:102
 msgid "Keyboard shortcut to close a tab"
@@ -604,7 +604,7 @@ msgid ""
 "format used for GTK+ resource files. If you set the option to the special "
 "string \"disabled\", then there will be no keyboard shortcut for this "
 "action."
-msgstr "Klavišų kombinacija, užverianti kortelę. Nurodomas tuo pačiu formatu kaip GTK+ resursų failuose. Jei nustatoma speciali seka „disabled“, su veiksmu nebus susieta jokia klavišų kombinacija."
+msgstr "Klavišų kombinacija, užverianti kortelę. Nurodoma tuo pačiu formatu kaip GTK+ resursų failuose. Jei nustatoma speciali seka „disabled“, su veiksmu nebus susieta jokia klavišų kombinacija."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:104
 msgid "Keyboard shortcut to close a window"
@@ -616,7 +616,7 @@ msgid ""
 "same format used for GTK+ resource files. If you set the option to the "
 "special string \"disabled\", then there will be no keyboard shortcut for "
 "this action."
-msgstr "Klavišų kombinacija, užverianti langą. Nurodomas tuo pačiu formatu kaip GTK+ resursų failuose. Jei nustatoma speciali seka „disabled“, su veiksmu nebus susieta jokia klavišų kombinacija."
+msgstr "Klavišų kombinacija, užverianti langą. Nurodoma tuo pačiu formatu kaip GTK+ resursų failuose. Jei nustatoma speciali seka „disabled“, su veiksmu nebus susieta jokia klavišų kombinacija."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:106
 msgid "Keyboard shortcut to copy text"
@@ -628,7 +628,7 @@ msgid ""
 "as a string in the same format used for GTK+ resource files. If you set the "
 "option to the special string \"disabled\", then there will be no keyboard "
 "shortcut for this action."
-msgstr "Klavišų kombinacija, nukopijuojanti pažymėtą tekstą į atmintinę. Nurodoma tuo pačiu formatu kaip GTK+ resursų failuose. Jei nustatoma speciali seka \"disabled\", su veiksmu nebus susieta jokia klavišų kombinacija."
+msgstr "Klavišų kombinacija, nukopijuojanti pažymėtą tekstą į iškarpinę. Nurodoma tuo pačiu formatu kaip GTK+ resursų failuose. Jei nustatoma speciali seka \"disabled\", su veiksmu nebus susieta jokia klavišų kombinacija."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:108
 msgid "Keyboard shortcut to paste text"
@@ -640,7 +640,7 @@ msgid ""
 "terminal. Expressed as a string in the same format used for GTK+ resource "
 "files. If you set the option to the special string \"disabled\", then there "
 "will be no keyboard shortcut for this action."
-msgstr "Klavišų kombinacija, įterpianti tekstą iš atmintinės. Nurodoma tuo pačiu formatu kaip GTK+ resursų failuose. Jei nustatoma speciali seka „disabled“, su veiksmu nebus susieta jokia klavišų kombinacija."
+msgstr "Klavišų kombinacija, įterpianti tekstą iš iškarpinės. Nurodoma tuo pačiu formatu kaip GTK+ resursų failuose. Jei nustatoma speciali seka „disabled“, su veiksmu nebus susieta jokia klavišų kombinacija."
 
 #: ../src/org.mate.terminal.gschema.xml.in.h:110
 msgid "Keyboard shortcut to toggle full screen mode"
@@ -1165,7 +1165,7 @@ msgstr "Tango"
 #. Translators: This is the name of a colour scheme
 #: ../src/profile-preferences.ui.h:13 ../src/extra-strings.c:74
 msgid "Linux console"
-msgstr "Linux konsolė"
+msgstr "Linux pultas"
 
 #. Translators: This is the name of a colour scheme
 #: ../src/profile-preferences.ui.h:14 ../src/extra-strings.c:76
@@ -1336,7 +1336,7 @@ msgstr "<b>Komanda</b>"
 
 #: ../src/profile-preferences.ui.h:48
 msgid "_Run command as a login shell"
-msgstr "Paleisti komandą kaip p_risijungimo aplinką"
+msgstr "Paleisti komandą kaip p_risijungimo apvalkalą"
 
 #: ../src/profile-preferences.ui.h:49
 msgid "_Update login records when command is launched"
@@ -1344,7 +1344,7 @@ msgstr "Atna_ujinti prisijungimų žurnalo įrašus, kai paleidžiama komanda"
 
 #: ../src/profile-preferences.ui.h:50
 msgid "Ru_n a custom command instead of my shell"
-msgstr "Vietoje mano aplinkos paleisti kitą koma_ndą"
+msgstr "Vietoje mano apvalkalo paleisti pasirinktinę koma_ndą"
 
 #: ../src/profile-preferences.ui.h:51
 msgid "Custom co_mmand:"
@@ -1498,7 +1498,7 @@ msgid ""
 "incorrectly.  They are only here to allow you to work around certain "
 "applications and operating systems that expect different terminal "
 "behavior.</i></small>"
-msgstr "<small><i><b>Pastaba:</b> Dėl šių nuostatų kai kurios programos gali elgtis nekorektiškai. Jos čia yra tik dėl to, kad būtų galima apeiti kai kurių programų ir operacinių sistemų, kurios tikisi kitokio terminalo veikimo, elgseną.</i></small>"
+msgstr "<small><i><b>Pastaba:</b> Dėl šių parametrų kai kurios programos gali elgtis nekorektiškai. Jos čia yra tik dėl to, kad būtų galima apeiti kai kurių programų ir operacinių sistemų, kurios tikisi kitokio terminalo veikimo, elgseną.</i></small>"
 
 #: ../src/profile-preferences.ui.h:88
 msgid "_Delete key generates:"
@@ -1510,7 +1510,7 @@ msgstr "„_Backspace“ klavišas siunčia:"
 
 #: ../src/profile-preferences.ui.h:90
 msgid "_Reset Compatibility Options to Defaults"
-msgstr "_Atstatyti suderinamumo parinktis į numatytąsias"
+msgstr "_Atstatyti suderinamumo parametrus į numatytuosius"
 
 #: ../src/profile-preferences.ui.h:91
 msgid "Compatibility"
@@ -1580,7 +1580,7 @@ msgstr "Mažinti"
 msgid "Normal Size"
 msgstr "Normalus dydis"
 
-#: ../src/terminal-accels.c:206 ../src/terminal-window.c:3726
+#: ../src/terminal-accels.c:206 ../src/terminal-window.c:4122
 msgid "Set Title"
 msgstr "Nustatyti pavadinimą"
 
@@ -1738,12 +1738,12 @@ msgstr "Pasirinkite pagrindinį profilį"
 msgid "No such profile \"%s\", using default profile\n"
 msgstr "Nėra profilio „%s“, naudojamas numatytasis profilis\n"
 
-#: ../src/terminal-app.c:1853
+#: ../src/terminal-app.c:1856
 #, c-format
 msgid "Invalid geometry string \"%s\"\n"
 msgstr "Klaidingas geometrijos aprašymas „%s“\n"
 
-#: ../src/terminal-app.c:2059
+#: ../src/terminal-app.c:2062
 msgid "User Defined"
 msgstr "Nurodyta naudotojo"
 
@@ -1910,7 +1910,7 @@ msgid ""
 "Option \"%s\" is no longer supported in this version of mate-terminal; you "
 "might want to create a profile with the desired setting, and use the new '--"
 "profile' option\n"
-msgstr "Ši mate-terminal versija nebepalaiko nustatymo „%s“. Derėtų sukurti profilį su šiuo nustatymu ir pasinaudoti naujuoju „--profile“ parametru\n"
+msgstr "Ši mate-terminal versija nebepalaiko parametro „%s“. Derėtų sukurti profilį su šiuo nustatymu ir pasinaudoti naujuoju „--profile“ parametru\n"
 
 #: ../src/terminal-options.c:209
 #, c-format
@@ -1924,7 +1924,7 @@ msgstr "Vienam langui suteiktos dvi rolės"
 #: ../src/terminal-options.c:369 ../src/terminal-options.c:402
 #, c-format
 msgid "\"%s\" option given twice for the same window\n"
-msgstr "Parinktis „%s“ buvo nurodyta du kartus tame pačiame lange\n"
+msgstr "Parametras „%s“ buvo nurodytas du kartus tame pačiame lange\n"
 
 #: ../src/terminal-options.c:601
 #, c-format
@@ -1946,7 +1946,7 @@ msgstr "Mastelis „%g“ yra per didelis, naudojamas %g\n"
 msgid ""
 "Option \"%s\" requires specifying the command to run on the rest of the "
 "command line"
-msgstr "Parinkties „%s“ gale turi būti nurodyta komanda, kurią reikės paleisti"
+msgstr "Parametro „%s“ gale turi būti nurodyta komanda, kurią reikės paleisti"
 
 #: ../src/terminal-options.c:813
 msgid "Not a valid terminal config file."
@@ -2057,51 +2057,51 @@ msgstr "MATE terminalo emuliatorius"
 
 #: ../src/terminal-options.c:1370
 msgid "Show MATE Terminal options"
-msgstr "Rodyti MATE terminalo parinktis"
+msgstr "Rodyti MATE terminalo parametrus"
 
 #: ../src/terminal-options.c:1380
 msgid ""
 "Options to open new windows or terminal tabs; more than one of these may be "
 "specified:"
-msgstr "Parinktys naujiems langams ar terminalų kortelėms; gali būti nurodyta daugiau negu vienas iš jų:"
+msgstr "Parametrai naujiems langams ar terminalų kortelėms; gali būti nurodytas daugiau negu vienas iš jų:"
 
 #: ../src/terminal-options.c:1381
 msgid "Show terminal options"
-msgstr "Rodyti terminalo parinktis"
+msgstr "Rodyti terminalo parametrus"
 
 #: ../src/terminal-options.c:1389
 msgid ""
 "Window options; if used before the first --window or --tab argument, sets "
 "the default for all windows:"
-msgstr "Lango parinktys; jei naudojama prieš pirmąjį --window arba --tab argumentą, nustato numatytąją parinktį visiems langams:"
+msgstr "Lango parametrai; jei naudojama prieš pirmąjį --window arba --tab argumentą, nustato numatytąjį parametrą visiems langams:"
 
 #: ../src/terminal-options.c:1390
 msgid "Show per-window options"
-msgstr "Rodyti lango parinktis"
+msgstr "Rodyti lango parametrus"
 
 #: ../src/terminal-options.c:1398
 msgid ""
 "Terminal options; if used before the first --window or --tab argument, sets "
 "the default for all terminals:"
-msgstr "Terminalo parinktys; jei naudojama prieš pirmąjį --window arba --tab argumentą, nustato numatytąją parinktį visiems langams:"
+msgstr "Terminalo parametrai; jei naudojama prieš pirmąjį --window arba --tab argumentą, nustato numatytąjį parametrą visiems langams:"
 
 #: ../src/terminal-options.c:1399
 msgid "Show per-terminal options"
-msgstr "Rodyti terminalo parinktis"
+msgstr "Rodyti terminalo parametrus"
 
 #: ../src/terminal-profile.c:168
 msgid "Unnamed"
 msgstr "Be pavadinimo"
 
-#: ../src/terminal-screen.c:1460
+#: ../src/terminal-screen.c:1458
 msgid "_Profile Preferences"
 msgstr "Profilio _nuostatos"
 
-#: ../src/terminal-screen.c:1461 ../src/terminal-screen.c:1837
+#: ../src/terminal-screen.c:1459 ../src/terminal-screen.c:1837
 msgid "_Relaunch"
 msgstr "_Paleisti iš naujo"
 
-#: ../src/terminal-screen.c:1464
+#: ../src/terminal-screen.c:1462
 msgid "There was an error creating the child process for this terminal"
 msgstr "Klaida bandant sukurti šio terminalo antrinį procesą"
 
@@ -2113,11 +2113,11 @@ msgstr "Antrinis procesas baigtas įprastai grąžinant būsena %d."
 #: ../src/terminal-screen.c:1847
 #, c-format
 msgid "The child process was terminated by signal %d."
-msgstr "Antrinis procesas nutrauktas signalu %d."
+msgstr "Antrinis procesas baigtas signalu %d."
 
 #: ../src/terminal-screen.c:1852
 msgid "The child process was terminated."
-msgstr "Antrinis procesas buvo nutrauktas."
+msgstr "Antrinis procesas buvo baigtas."
 
 #: ../src/terminal-tab-label.c:137
 msgid "Close tab"
@@ -2162,7 +2162,7 @@ msgstr "GNU Bendrosios viešosios licencijos kopiją turėjote gauti su MATE ter
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%d is used as the accelerator (with d between 1 and 9), and
 #. * the %s is the name of the terminal profile.
-#: ../src/terminal-window.c:476
+#: ../src/terminal-window.c:664
 #, c-format
 msgid "_%d. %s"
 msgstr "_%d. %s"
@@ -2170,259 +2170,259 @@ msgstr "_%d. %s"
 #. Translators: This is the label of a menu item to choose a profile.
 #. * _%c is used as the accelerator (it will be a character between A and Z),
 #. * and the %s is the name of the terminal profile.
-#: ../src/terminal-window.c:482
+#: ../src/terminal-window.c:670
 #, c-format
 msgid "_%c. %s"
 msgstr "_%c. %s"
 
 #. Toplevel
-#: ../src/terminal-window.c:1668
+#: ../src/terminal-window.c:1856
 msgid "_File"
 msgstr "_Failas"
 
-#: ../src/terminal-window.c:1669 ../src/terminal-window.c:1682
-#: ../src/terminal-window.c:1923
+#: ../src/terminal-window.c:1857 ../src/terminal-window.c:1870
+#: ../src/terminal-window.c:2111
 msgid "Open _Terminal"
 msgstr "Naujas _terminalas"
 
-#: ../src/terminal-window.c:1670 ../src/terminal-window.c:1687
-#: ../src/terminal-window.c:1928
+#: ../src/terminal-window.c:1858 ../src/terminal-window.c:1875
+#: ../src/terminal-window.c:2116
 msgid "Open Ta_b"
 msgstr "Nauja _kortelė"
 
-#: ../src/terminal-window.c:1671
+#: ../src/terminal-window.c:1859
 msgid "_Edit"
 msgstr "_Taisa"
 
-#: ../src/terminal-window.c:1672
+#: ../src/terminal-window.c:1860
 msgid "_View"
 msgstr "R_odymas"
 
-#: ../src/terminal-window.c:1673
+#: ../src/terminal-window.c:1861
 msgid "_Search"
 msgstr "_Paieška"
 
-#: ../src/terminal-window.c:1674
+#: ../src/terminal-window.c:1862
 msgid "_Terminal"
 msgstr "_Terminalas"
 
-#: ../src/terminal-window.c:1675
+#: ../src/terminal-window.c:1863
 msgid "Ta_bs"
 msgstr "_Kortelės"
 
-#: ../src/terminal-window.c:1676
+#: ../src/terminal-window.c:1864
 msgid "_Help"
 msgstr "_Žinynas"
 
-#: ../src/terminal-window.c:1692
+#: ../src/terminal-window.c:1880
 msgid "New _Profile…"
 msgstr "Naujas _profilis…"
 
-#: ../src/terminal-window.c:1697
+#: ../src/terminal-window.c:1885
 msgid "_Save Contents"
 msgstr "Į_rašyti turinį"
 
-#: ../src/terminal-window.c:1702 ../src/terminal-window.c:1938
+#: ../src/terminal-window.c:1890 ../src/terminal-window.c:2126
 msgid "C_lose Tab"
 msgstr "Už_verti kortelę"
 
-#: ../src/terminal-window.c:1707
+#: ../src/terminal-window.c:1895
 msgid "_Close Window"
 msgstr "_Užverti langą"
 
-#: ../src/terminal-window.c:1724 ../src/terminal-window.c:1918
+#: ../src/terminal-window.c:1912 ../src/terminal-window.c:2106
 msgid "Paste _Filenames"
 msgstr "Įdėti _failų vardus"
 
-#: ../src/terminal-window.c:1734
+#: ../src/terminal-window.c:1922
 msgid "P_rofiles…"
 msgstr "P_rofiliai…"
 
-#: ../src/terminal-window.c:1739
+#: ../src/terminal-window.c:1927
 msgid "_Keyboard Shortcuts…"
 msgstr "_Klavišų kombinacijos…"
 
-#: ../src/terminal-window.c:1744
+#: ../src/terminal-window.c:1932
 msgid "Pr_ofile Preferences"
 msgstr "Profilio _nuostatos"
 
-#: ../src/terminal-window.c:1768
+#: ../src/terminal-window.c:1956
 msgid "_Find..."
 msgstr "_Ieškoti..."
 
-#: ../src/terminal-window.c:1773
+#: ../src/terminal-window.c:1961
 msgid "Find Ne_xt"
 msgstr "Ieškoti _kito"
 
-#: ../src/terminal-window.c:1778
+#: ../src/terminal-window.c:1966
 msgid "Find Pre_vious"
 msgstr "Ieškoti a_nkstesnio"
 
-#: ../src/terminal-window.c:1783
+#: ../src/terminal-window.c:1971
 msgid "_Clear Highlight"
 msgstr "Iš_valyti paryškinimą"
 
-#: ../src/terminal-window.c:1789
+#: ../src/terminal-window.c:1977
 msgid "Go to _Line..."
 msgstr "Eiti į ei_lutę..."
 
-#: ../src/terminal-window.c:1794
+#: ../src/terminal-window.c:1982
 msgid "_Incremental Search..."
 msgstr "_Prieauginė paieška..."
 
 #. Terminal menu
-#: ../src/terminal-window.c:1801
+#: ../src/terminal-window.c:1989
 msgid "Change _Profile"
 msgstr "_Pakeisti profilį"
 
-#: ../src/terminal-window.c:1803
+#: ../src/terminal-window.c:1991
 msgid "_Previous Profile"
 msgstr "Ankstesnis _profilis"
 
-#: ../src/terminal-window.c:1808
+#: ../src/terminal-window.c:1996
 msgid "_Next Profile"
 msgstr "_Kitas profilis"
 
-#: ../src/terminal-window.c:1813
+#: ../src/terminal-window.c:2001
 msgid "_Set Title…"
 msgstr "_Nustatyti pavadinimą…"
 
-#: ../src/terminal-window.c:1817
+#: ../src/terminal-window.c:2005
 msgid "Set _Character Encoding"
 msgstr "N_ustatyti simbolių koduotę"
 
-#: ../src/terminal-window.c:1819
+#: ../src/terminal-window.c:2007
 msgid "_Reset"
 msgstr "_Atstatyti"
 
-#: ../src/terminal-window.c:1824
+#: ../src/terminal-window.c:2012
 msgid "Reset and C_lear"
 msgstr "Atstatyti ir išva_lyti"
 
-#: ../src/terminal-window.c:1831
+#: ../src/terminal-window.c:2019
 msgid "_Add or Remove…"
 msgstr "_Pridėti arba pašalinti…"
 
-#: ../src/terminal-window.c:1838
+#: ../src/terminal-window.c:2026
 msgid "_Previous Tab"
 msgstr "_Ankstesnė kortelė"
 
-#: ../src/terminal-window.c:1843
+#: ../src/terminal-window.c:2031
 msgid "_Next Tab"
 msgstr "_Kita kortelė"
 
-#: ../src/terminal-window.c:1848
+#: ../src/terminal-window.c:2036
 msgid "Move Tab _Left"
 msgstr "Perkelti kortelę kai_rėn"
 
-#: ../src/terminal-window.c:1853
+#: ../src/terminal-window.c:2041
 msgid "Move Tab _Right"
 msgstr "Perkelti kortelę _dešinėn"
 
-#: ../src/terminal-window.c:1858
+#: ../src/terminal-window.c:2046
 msgid "_Detach tab"
 msgstr "Atka_binti kortelę"
 
-#: ../src/terminal-window.c:1865
+#: ../src/terminal-window.c:2053
 msgid "_Contents"
 msgstr "_Turinys"
 
-#: ../src/terminal-window.c:1870
+#: ../src/terminal-window.c:2058
 msgid "_About"
 msgstr "_Apie"
 
-#: ../src/terminal-window.c:1877
+#: ../src/terminal-window.c:2065
 msgid "_Send Mail To…"
 msgstr "_Siųsti laišką…"
 
-#: ../src/terminal-window.c:1882
+#: ../src/terminal-window.c:2070
 msgid "_Copy E-mail Address"
 msgstr "_Kopijuoti el.pašto adresą"
 
-#: ../src/terminal-window.c:1887
+#: ../src/terminal-window.c:2075
 msgid "C_all To…"
 msgstr "_Skambinti…"
 
-#: ../src/terminal-window.c:1892
+#: ../src/terminal-window.c:2080
 msgid "_Copy Call Address"
 msgstr "_Kopijuoti skambučio adresą"
 
-#: ../src/terminal-window.c:1897
+#: ../src/terminal-window.c:2085
 msgid "_Open Link"
 msgstr "_Atverti nuorodą"
 
-#: ../src/terminal-window.c:1902
+#: ../src/terminal-window.c:2090
 msgid "_Copy Link Address"
 msgstr "_Kopijuoti nuorodos adresą"
 
-#: ../src/terminal-window.c:1906
+#: ../src/terminal-window.c:2094
 msgid "P_rofiles"
 msgstr "P_rofiliai"
 
-#: ../src/terminal-window.c:1933 ../src/terminal-window.c:3134
+#: ../src/terminal-window.c:2121 ../src/terminal-window.c:3530
 msgid "C_lose Window"
 msgstr "_Užverti langą"
 
-#: ../src/terminal-window.c:1943
+#: ../src/terminal-window.c:2131
 msgid "L_eave Full Screen"
 msgstr "_Palikti visą ekraną"
 
-#: ../src/terminal-window.c:1947
+#: ../src/terminal-window.c:2135
 msgid "_Input Methods"
 msgstr "Įved_imo metodai"
 
-#: ../src/terminal-window.c:1954
+#: ../src/terminal-window.c:2142
 msgid "Show _Menubar"
 msgstr "Rodyti _meniu"
 
-#: ../src/terminal-window.c:1960
+#: ../src/terminal-window.c:2148
 msgid "_Full Screen"
 msgstr "_Visame ekrane"
 
-#: ../src/terminal-window.c:3121
+#: ../src/terminal-window.c:3517
 msgid "Close this window?"
 msgstr "Užverti langą?"
 
-#: ../src/terminal-window.c:3121
+#: ../src/terminal-window.c:3517
 msgid "Close this terminal?"
 msgstr "Užverti terminalą?"
 
-#: ../src/terminal-window.c:3125
+#: ../src/terminal-window.c:3521
 msgid ""
 "There are still processes running in some terminals in this window. Closing "
 "the window will kill all of them."
 msgstr "Yra procesų, veikiančių šio lango terminaluose. Jei užversite langą, jie visi bus nutraukti."
 
-#: ../src/terminal-window.c:3129
+#: ../src/terminal-window.c:3525
 msgid ""
 "There is still a process running in this terminal. Closing the terminal will"
 " kill it."
 msgstr "Šiame terminale vis dar veikia procesas. Jei užversite terminalą, jis bus nutrauktas."
 
-#: ../src/terminal-window.c:3134
+#: ../src/terminal-window.c:3530
 msgid "C_lose Terminal"
 msgstr "_Užverti terminalą"
 
-#: ../src/terminal-window.c:3200
+#: ../src/terminal-window.c:3596
 msgid "Could not save contents"
 msgstr "Nepavyko įrašyti turinio"
 
-#: ../src/terminal-window.c:3224
+#: ../src/terminal-window.c:3620
 msgid "Save as..."
-msgstr "Įrašyti taip..."
+msgstr "Įrašyti kaip..."
 
-#: ../src/terminal-window.c:3743
+#: ../src/terminal-window.c:4139
 msgid "_Title:"
 msgstr "_Pavadinimas:"
 
-#: ../src/terminal-window.c:3938
+#: ../src/terminal-window.c:4328
 msgid "Contributors:"
 msgstr "Pagalbininkai:"
 
-#: ../src/terminal-window.c:3957
+#: ../src/terminal-window.c:4347
 msgid "A terminal emulator for the MATE desktop"
 msgstr "Terminalo emuliatorius MATE darbo aplinkai"
 
-#: ../src/terminal-window.c:3964
+#: ../src/terminal-window.c:4354
 msgid "translator-credits"
 msgstr "Paskutinysis vertėjas:\nŽygimantas Beručka <zygis@gnome.org>\n\nVertėjai:\nTomas Kuliavas <tokul@users.sf.net>,\nVaidrius Petrauskas <vaidrius@delfi.lt>"
