@@ -8,8 +8,8 @@ Uploaders: John Paul Adrian Glaubitz <glaubitz@physik.fu-berlin.de>,
            Wences Arana <aranax@debian.org.gt>,
            Vangelis Mouhtsis <vangelis@gnugr.org>,
            Martin Wimpress <code@flexion.org>,
-Standards-Version: 3.9.8
-Build-Depends: debhelper (>= 9),
+Standards-Version: 4.0.0
+Build-Depends: debhelper (>= 10.3~),
                dpkg-dev (>= 1.16.1.1),
                intltool,
                libdconf-dev,
@@ -18,7 +18,7 @@ Build-Depends: debhelper (>= 9),
                libsm-dev,
                libvte-2.91-dev (>= 0.38),
                libx11-dev,
-               mate-common (>= 1.16),
+               mate-common (>= 1.18),
                yelp-tools,
 Homepage: http://www.mate-desktop.org
 Vcs-Browser: https://anonscm.debian.org/git/pkg-mate/mate-terminal.git

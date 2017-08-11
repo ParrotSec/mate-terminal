@@ -1,9 +1,33 @@
-mate-terminal (1.16.3-1parrot0) testing; urgency=medium
+mate-terminal (1.18.1-1parrot0) testing; urgency=medium
 
-  * Update debian version
-  * Apply parrot changes.
+  * Import new debian version.
+  * Apply parrot fixes.
 
- -- Lorenzo "Palinuro" Faletra <palinuro@parrotsec.org>  Wed, 05 Jul 2017 15:40:59 +0200
+ -- Lorenzo "Palinuro" Faletra <palinuro@parrotsec.org>  Fri, 11 Aug 2017 17:46:50 +0200
+
+mate-terminal (1.18.1-1) unstable; urgency=medium
+
+  [ Martin Wimpress ]
+  * debian/control: Dependencies updated for MATE 1.17.
+  * debian/control: Drop unused B-D docbook-to-man.
+  * debian/control: Dependencies updated for MATE 1.18.
+
+  [ Aron Xu ]
+  * New upstream release.
+
+  [ Vangelis Mouhtsis ]
+  * debian/compat:
+    + Update compat version.
+  * debian/control:
+    + Bump debhelper version to (>= 10.3~).
+  * debian/control:
+    + Bump Standards-Version: to 4.0.0. No changes needed.
+  * debian/rules:
+    + Add new block for override_dh_missing.
+  * debian/rules:
+    + Disable autoreconf, handled by autogen.sh.
+
+ -- Mike Gabriel <sunweaver@debian.org>  Tue, 25 Jul 2017 18:27:46 +0200
 
 mate-terminal (1.16.3-1) unstable; urgency=medium
 
@@ -12,24 +36,6 @@ mate-terminal (1.16.3-1) unstable; urgency=medium
       #862035).
 
  -- Mike Gabriel <sunweaver@debian.org>  Sat, 03 Jun 2017 21:10:29 +0200
-
-mate-terminal (1.16.2-1parrot2) testing; urgency=medium
-
-  * Fix postinst script
-
- -- Lorenzo "Palinuro" Faletra <palinuro@parrotsec.org>  Sun, 19 Feb 2017 05:56:01 +0100
-
-mate-terminal (1.16.2-1parrot1) testing; urgency=medium
-
-  * Import new upstream release
-
- -- Lorenzo "Palinuro" Faletra <palinuro@parrotsec.org>  Sun, 19 Feb 2017 04:59:10 +0100
-
-mate-terminal (1.16.1-1parrot0) testing; urgency=medium
-
-  * Add gnome-terminal symlink to use mate-terminal on mate-menu
-
- -- Lorenzo "Palinuro" Faletra <palinuro@parrotsec.org>  Sun, 22 Jan 2017 12:02:01 +0100
 
 mate-terminal (1.16.2-1) unstable; urgency=medium
 

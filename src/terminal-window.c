@@ -2916,6 +2916,39 @@ notebook_button_press_cb (GtkWidget *widget,
     GtkWidget *menu;
     GtkAction *action;
     int tab_clicked;
+    int page_num;
+    int before_pages;
+    int later_pages;
+
+    if (event->type == GDK_BUTTON_PRESS && event->button == 2)
+    {
+        tab_clicked = find_tab_num_at_pos (notebook, event->x_root, event->y_root);
+        if (tab_clicked >= 0)
+        {
+            before_pages = gtk_notebook_get_n_pages (GTK_NOTEBOOK (notebook));
+            page_num = gtk_notebook_get_current_page (notebook);
+            gtk_notebook_set_current_page (notebook, tab_clicked);
+            TerminalScreen *active_screen = priv->active_screen;
+
+                if (!(confirm_close_window_or_tab (window, active_screen)))
+                {
+                    update_tab_visibility (window, -1);
+                    gtk_notebook_remove_page(notebook, tab_clicked);
+                }
+
+                later_pages = gtk_notebook_get_n_pages (GTK_NOTEBOOK (notebook));
+
+                if (before_pages > later_pages) {
+                    if (tab_clicked > page_num)
+                        gtk_notebook_set_current_page (notebook, page_num);
+                    else if (tab_clicked < page_num)
+                        gtk_notebook_set_current_page (notebook, page_num - 1);
+                }
+                else
+                    gtk_notebook_set_current_page (notebook, page_num);
+
+        }
+    }
 
     if (event->type != GDK_BUTTON_PRESS ||
             event->button != 3 ||
@@ -4304,7 +4337,7 @@ help_about_callback (GtkAction *action,
         "Copyright © 2006 Guilherme de S. Pastore\n"
         "Copyright © 2007–2010 Christian Persch\n"
         "Copyright © 2011 Perberos\n"
-        "Copyright © 2012-2016 MATE developers";
+        "Copyright © 2012-2017 MATE developers";
     char *licence_text;
     GKeyFile *key_file;
     GError *error = NULL;
