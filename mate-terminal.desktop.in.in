@@ -13,4 +13,4 @@ X-MATE-Bugzilla-Component=BugBuddyBugs
 X-MATE-Bugzilla-Version=@VERSION@
 Categories=System;GTK;Utility;TerminalEmulator;
 StartupNotify=true
-_Keywords=MATE;terminal;shell;prompt;command;commandline;
+

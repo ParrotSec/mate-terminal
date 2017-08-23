@@ -1,9 +1,8 @@
-mate-terminal (1.18.1-1parrot0) testing; urgency=medium
+mate-terminal (1.18.1-2) unstable; urgency=medium
 
-  * Import new debian version.
-  * Apply parrot fixes.
+  * As-is re-upload to re-trigger a full rebuild on all architectures.
 
- -- Lorenzo "Palinuro" Faletra <palinuro@parrotsec.org>  Fri, 11 Aug 2017 17:46:50 +0200
+ -- Mike Gabriel <sunweaver@debian.org>  Wed, 23 Aug 2017 18:40:53 +0200
 
 mate-terminal (1.18.1-1) unstable; urgency=medium
 
