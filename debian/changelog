@@ -1,3 +1,9 @@
+mate-terminal (1.18.1-2parrot1) testing; urgency=medium
+
+  * Reimport parrot patches.
+
+ -- Lorenzo "Palinuro" Faletra <palinuro@parrotsec.org>  Thu, 31 Aug 2017 02:17:16 +0200
+
 mate-terminal (1.18.1-2) unstable; urgency=medium
 
   * As-is re-upload to re-trigger a full rebuild on all architectures.
