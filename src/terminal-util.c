@@ -123,22 +123,6 @@ terminal_util_show_error_dialog (GtkWindow *transient_parent,
 	g_free (message);
 }
 
-static gboolean
-open_url (GtkWindow *parent,
-          const char *uri,
-          guint32 user_time,
-          GError **error)
-{
-	GdkScreen *screen;
-
-	if (parent)
-		screen = gtk_widget_get_screen (GTK_WIDGET (parent));
-	else
-		screen = gdk_screen_get_default ();
-
-	return gtk_show_uri (screen, uri, user_time, error);
-}
-
 void
 terminal_util_show_help (const char *topic,
                          GtkWindow  *parent)
@@ -155,7 +139,7 @@ terminal_util_show_help (const char *topic,
 		url = g_strdup ("help:mate-terminal");
 	}
 
-	if (!open_url (GTK_WINDOW (parent), url, gtk_get_current_event_time (), &error))
+	if (!gtk_show_uri_on_window (GTK_WINDOW (parent), url, gtk_get_current_event_time (), &error))
 	{
 		terminal_util_show_error_dialog (GTK_WINDOW (parent), NULL, error,
 		                                 _("There was an error displaying help"));
@@ -227,7 +211,7 @@ terminal_util_open_url (GtkWidget *parent,
 		g_assert_not_reached ();
 	}
 
-	if (!open_url (GTK_WINDOW (parent), uri, user_time, &error))
+	if (!gtk_show_uri_on_window (GTK_WINDOW (parent), uri, user_time, &error))
 	{
 		terminal_util_show_error_dialog (GTK_WINDOW (parent), NULL, error,
 		                                 _("Could not open the address “%s”"),

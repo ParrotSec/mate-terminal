@@ -1,6 +1,6 @@
 m4_define([gt_version_major],[1])
-m4_define([gt_version_minor],[18])
-m4_define([gt_version_micro],[1])
+m4_define([gt_version_minor],[20])
+m4_define([gt_version_micro],[0])
 m4_define([gt_version_extra],[])
 m4_define([gt_version],[gt_version_major().gt_version_minor().gt_version_micro()gt_version_extra])
 
@@ -36,18 +36,12 @@ MATE_DEBUG_CHECK
 MATE_COMPILE_WARNINGS([maximum])
 #MATE_MAINTAINER_MODE_DEFINES
 
-# GLib min/max required versions
-AC_DEFINE([GLIB_VERSION_MAX_ALLOWED], [GLIB_VERSION_2_36],
-	[Warn on use of APIs added after GLib 2.36])
-AC_DEFINE([GLIB_VERSION_MIN_REQUIRED], [GLIB_VERSION_2_36],
-	[Warn on use of APIs deprecated before GLib 2.36])
-
 AM_GLIB_GNU_GETTEXT
 
-GLIB_REQUIRED=2.36.0
-GIO_REQUIRED=2.25.12
-GTK_REQUIRED=3.14.0
-VTE_REQUIRED=0.38
+GLIB_REQUIRED=2.50.0
+GIO_REQUIRED=2.50.0
+GTK_REQUIRED=3.22.0
+VTE_REQUIRED=0.46
 DCONF_REQUIRED=0.13.4
 
 PKG_CHECK_MODULES([TERM],

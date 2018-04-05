@@ -13,6 +13,8 @@ override_dh_missing:
 	dh_missing --fail-missing
 
 override_dh_install:
+	mkdir -p debian/tmp/usr/share/metainfo/
+	mv debian/tmp/usr/share/appdata/mate-terminal.appdata.xml debian/tmp/usr/share/metainfo/
 	dh_install
 
 override_dh_installchangelogs:

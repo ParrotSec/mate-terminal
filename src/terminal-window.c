@@ -160,6 +160,9 @@ static gboolean terminal_window_focus_in_event (GtkWidget *widget,
 static gboolean notebook_button_press_cb     (GtkWidget *notebook,
         GdkEventButton *event,
         TerminalWindow *window);
+static gboolean window_key_press_cb     (GtkWidget *notebook,
+        GdkEventKey *event,
+        TerminalWindow *window);
 static gboolean notebook_popup_menu_cb       (GtkWidget *notebook,
         TerminalWindow *window);
 static void notebook_page_selected_callback  (GtkWidget       *notebook,
@@ -574,8 +577,8 @@ position_menu_under_widget (GtkMenu *menu,
     GtkRequisition req;
     GtkRequisition menu_req;
     GdkRectangle monitor;
-    int monitor_num;
-    GdkScreen *screen;
+    GdkMonitor *monitor_num;
+    GdkDisplay *display;
     GtkAllocation widget_allocation;
 
     widget_window = gtk_widget_get_window (widget);
@@ -585,11 +588,11 @@ position_menu_under_widget (GtkMenu *menu,
     gtk_widget_get_preferred_size (widget, &req, NULL);
     gtk_widget_get_preferred_size (GTK_WIDGET (menu), &menu_req, NULL);
 
-    screen = gtk_widget_get_screen (GTK_WIDGET (menu));
-    monitor_num = gdk_screen_get_monitor_at_window (screen, widget_window);
-    if (monitor_num < 0)
-        monitor_num = 0;
-    gdk_screen_get_monitor_geometry (screen, monitor_num, &monitor);
+    display = gtk_widget_get_display (GTK_WIDGET (menu));
+    monitor_num = gdk_display_get_monitor_at_window (display, widget_window);
+    if (monitor_num == NULL)
+        monitor_num = gdk_display_get_monitor (display, 0);
+    gdk_monitor_get_geometry (monitor_num, &monitor);
 
     gdk_window_get_origin (widget_window, x, y);
     if (!gtk_widget_get_has_window (widget))
@@ -1199,7 +1202,7 @@ terminal_window_update_search_sensitivity (TerminalScreen *screen,
     if (screen != priv->active_screen)
         return;
 
-    can_search = vte_terminal_search_get_gregex (VTE_TERMINAL (screen)) != NULL;
+    can_search = vte_terminal_search_get_regex (VTE_TERMINAL (screen)) != NULL;
 
     action = gtk_action_group_get_action (priv->action_group, "SearchFindNext");
     gtk_action_set_sensitive (action, can_search);
@@ -1919,7 +1922,7 @@ terminal_window_init (TerminalWindow *window)
             G_CALLBACK (edit_paste_callback)
         },
         {
-            "EditSelectAll", GTK_STOCK_SELECT_ALL, NULL, NULL,
+            "EditSelectAll", GTK_STOCK_SELECT_ALL, NULL, "<shift><control>A",
             NULL,
             G_CALLBACK (edit_select_all_callback)
         },
@@ -2203,6 +2206,8 @@ terminal_window_init (TerminalWindow *window)
     gtk_notebook_set_group_name (GTK_NOTEBOOK (priv->notebook), I_("mate-terminal-window"));
     g_signal_connect (priv->notebook, "button-press-event",
                       G_CALLBACK (notebook_button_press_cb), window);
+    g_signal_connect (window, "key-press-event",
+                      G_CALLBACK (window_key_press_cb), window);
     g_signal_connect (priv->notebook, "popup-menu",
                       G_CALLBACK (notebook_popup_menu_cb), window);
     g_signal_connect_after (priv->notebook, "switch-page",
@@ -2638,7 +2643,6 @@ terminal_window_remove_screen (TerminalWindow *window,
     update_tab_visibility (window, -1);
 
     screen_container = terminal_screen_container_get_from_screen (screen);
-#if GTK_CHECK_VERSION(3, 16, 0)
     if (detach_tab)
     {
         gtk_notebook_detach_tab (GTK_NOTEBOOK (priv->notebook),
@@ -2648,10 +2652,6 @@ terminal_window_remove_screen (TerminalWindow *window,
     else
         gtk_container_remove (GTK_CONTAINER (priv->notebook),
                               GTK_WIDGET (screen_container));
-#else
-    gtk_container_remove (GTK_CONTAINER (priv->notebook),
-                          GTK_WIDGET (screen_container));
-#endif
 }
 
 void
@@ -2853,11 +2853,11 @@ terminal_window_update_size_set_geometry (TerminalWindow *window,
 
     if (pos_gravity == GDK_GRAVITY_SOUTH_EAST ||
         pos_gravity == GDK_GRAVITY_NORTH_EAST)
-        force_pos_x = gdk_screen_get_width (gtk_widget_get_screen (app)) -
+        force_pos_x = WidthOfScreen (gdk_x11_screen_get_xscreen (gtk_widget_get_screen (app))) -
                       pixel_width + force_pos_x;
     if (pos_gravity == GDK_GRAVITY_SOUTH_WEST ||
         pos_gravity == GDK_GRAVITY_SOUTH_EAST)
-        force_pos_y = gdk_screen_get_height (gtk_widget_get_screen (app)) -
+        force_pos_y = HeightOfScreen (gdk_x11_screen_get_xscreen (gtk_widget_get_screen (app))) -
                       pixel_height + force_pos_y;
 
     /* we don't let you put a window offscreen; maybe some people would
@@ -2919,8 +2919,12 @@ notebook_button_press_cb (GtkWidget *widget,
     int page_num;
     int before_pages;
     int later_pages;
+    GSettings *settings;
 
-    if (event->type == GDK_BUTTON_PRESS && event->button == 2)
+    settings = g_settings_new ("org.mate.terminal.global");
+
+    if ((event->type == GDK_BUTTON_PRESS && event->button == 2) &&
+            (g_settings_get_boolean (settings, "middle-click-closes-tabs")))
     {
         tab_clicked = find_tab_num_at_pos (notebook, event->x_root, event->y_root);
         if (tab_clicked >= 0)
@@ -2975,6 +2979,45 @@ notebook_button_press_cb (GtkWidget *widget,
                     event->button, event->time);
 
     return TRUE;
+}
+
+static gboolean
+window_key_press_cb (GtkWidget *widget,
+                     GdkEventKey *event,
+                     TerminalWindow *window)
+{
+    GSettings *settings; 
+
+    settings = g_settings_new ("org.mate.terminal.global"); 
+
+    if (g_settings_get_boolean (settings, "ctrl-tab-switch-tabs") &&
+        event->state & GDK_CONTROL_MASK)
+    {
+        TerminalWindowPrivate *priv = window->priv;
+        GtkNotebook *notebook = GTK_NOTEBOOK (priv->notebook);
+
+        int pages = gtk_notebook_get_n_pages (notebook);
+        int page_num = gtk_notebook_get_current_page (notebook);
+
+        if (event->keyval == GDK_KEY_ISO_Left_Tab)
+        {
+            if (page_num != 0)
+                gtk_notebook_prev_page (notebook);
+            else
+                gtk_notebook_set_current_page (notebook, (pages - 1));
+            return TRUE;
+        }
+
+        if (event->keyval == GDK_KEY_Tab)
+        {
+            if (page_num != (pages -1))
+                gtk_notebook_next_page (notebook);
+            else
+                gtk_notebook_set_current_page (notebook, 0);
+            return TRUE;
+        }
+    }
+    return FALSE;
 }
 
 static gboolean
@@ -4181,12 +4224,8 @@ terminal_set_title_callback (GtkAction *action,
     gtk_box_pack_start (GTK_BOX (message_area), hbox, FALSE, FALSE, 0);
 
     label = gtk_label_new_with_mnemonic (_("_Title:"));
-#if GTK_CHECK_VERSION (3, 16, 0)
     gtk_label_set_xalign (GTK_LABEL (label), 0.0);
     gtk_label_set_yalign (GTK_LABEL (label), 0.5);
-#else
-    gtk_misc_set_alignment (GTK_MISC (label), 0.0, 0.5);
-#endif
     gtk_box_pack_start (GTK_BOX (hbox), label, FALSE, FALSE, 0);
 
     entry = gtk_entry_new ();
@@ -4337,7 +4376,7 @@ help_about_callback (GtkAction *action,
         "Copyright © 2006 Guilherme de S. Pastore\n"
         "Copyright © 2007–2010 Christian Persch\n"
         "Copyright © 2011 Perberos\n"
-        "Copyright © 2012-2017 MATE developers";
+        "Copyright © 2012-2018 MATE developers";
     char *licence_text;
     GKeyFile *key_file;
     GError *error = NULL;

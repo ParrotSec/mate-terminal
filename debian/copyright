@@ -1,4 +1,4 @@
-Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: mate-terminal
 Upstream-Contact: Stefano Karapetsas <stefano@karapetsas.com>
 Source: http://git.mate-desktop.org/mate-terminal/
@@ -173,6 +173,7 @@ Comment:
  Assuming license as found in COPYING file.
 
 Files: .tx/config
+       .github/issue_template.md
        help/Makefile.am
        help/bg/Makefile.am
        help/ja/Makefile.am
