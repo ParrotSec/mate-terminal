@@ -64,7 +64,17 @@ static const TerminalColorScheme color_schemes[] =
 		N_("White on black"),
 		{ 1, 1, 1, 1 },
 		{ 0, 0, 0, 1 }
-	}
+	},
+	/* Translators: "Solarized" is the name of a colour scheme, "light" can be translated */
+	{ N_("Solarized light"),
+		{ 0.396078, 0.482352, 0.513725, 1 },
+		{ 0.992156, 0.964705, 0.890196, 1 }
+	},
+	/* Translators: "Solarized" is the name of a colour scheme, "dark" can be translated */
+	{ N_("Solarized dark"),
+		{ 0.513725, 0.580392, 0.588235, 1 },
+		{ 0,        0.168627, 0.211764, 1 }
+	},
 };
 
 static void profile_forgotten_cb (TerminalProfile           *profile,
@@ -146,9 +156,9 @@ profile_notify_sensitivity_cb (TerminalProfile *profile,
 		               !terminal_profile_property_locked (profile, TERMINAL_PROFILE_CUSTOM_COMMAND));
 	}
 
-	gtk_widget_hide (profile_editor_get_widget (editor, "background-image"));
 	gtk_widget_hide (profile_editor_get_widget (editor, "darken-background-transparent-or-image-scale-label"));
 	gtk_widget_show (profile_editor_get_widget (editor, "darken-background-transparent-scale-label"));
+	gtk_widget_hide (profile_editor_get_widget (editor, "scroll-background-checkbutton"));
 	if (!prop_name || prop_name == I_(TERMINAL_PROFILE_BACKGROUND_TYPE))
 	{
 		gboolean bg_type_locked = terminal_profile_property_locked (profile, TERMINAL_PROFILE_BACKGROUND_TYPE);
@@ -451,18 +461,13 @@ profile_palette_notify_colorpickers_cb (TerminalProfile *profile,
 	for (i = 0; i < n_colors; i++)
 	{
 		char name[32];
-		GdkRGBA old_color;
 
 		g_snprintf (name, sizeof (name), "palette-colorpicker-%d", i + 1);
 		w = profile_editor_get_widget (editor, name);
 
-		gtk_color_chooser_get_rgba (GTK_COLOR_CHOOSER (w), &old_color);
-		if (!gdk_rgba_equal (&old_color, &colors[i]))
-		{
-			g_signal_handlers_block_by_func (w, G_CALLBACK (palette_color_notify_cb), profile);
-			gtk_color_chooser_set_rgba (GTK_COLOR_CHOOSER (w), &colors[i]);
-			g_signal_handlers_unblock_by_func (w, G_CALLBACK (palette_color_notify_cb), profile);
-		}
+		g_signal_handlers_block_by_func (w, G_CALLBACK (palette_color_notify_cb), profile);
+		gtk_color_chooser_set_rgba (GTK_COLOR_CHOOSER (w), &colors[i]);
+		g_signal_handlers_unblock_by_func (w, G_CALLBACK (palette_color_notify_cb), profile);
 	}
 }
 
