@@ -1,0 +1,15 @@
+Author: Vlad Orlov <monsta@inbox.ru>
+Description: Fix Find Next/Previous shortcuts and menu items, which are broken due to VTE patch "revert-pcre2.patch".
+ See https://launchpad.net/bugs/1636666
+
+--- mate-terminal-1.20.0.orig/src/terminal-window.c
++++ mate-terminal-1.20.0/src/terminal-window.c
+@@ -1202,7 +1202,7 @@ terminal_window_update_search_sensitivit
+     if (screen != priv->active_screen)
+         return;
+ 
+-    can_search = vte_terminal_search_get_regex (VTE_TERMINAL (screen)) != NULL;
++    can_search = vte_terminal_search_get_gregex (VTE_TERMINAL (screen)) != NULL;
+ 
+     action = gtk_action_group_get_action (priv->action_group, "SearchFindNext");
+     gtk_action_set_sensitive (action, can_search);

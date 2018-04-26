@@ -1,3 +1,25 @@
+mate-terminal (1.20.0-4parrot1) testing; urgency=medium
+
+  * Import Parrot patches.
+
+ -- Lorenzo "Palinuro" Faletra <palinuro@parrotsec.org>  Thu, 26 Apr 2018 13:41:34 +0200
+
+mate-terminal (1.20.0-4) unstable; urgency=medium
+
+  * debian/patches:
+    + Prepend patches from series file to ubuntu.series file.
+
+ -- Mike Gabriel <sunweaver@debian.org>  Wed, 18 Apr 2018 14:44:57 +0200
+
+mate-terminal (1.20.0-3) unstable; urgency=medium
+
+  [ Martin Wimpress ]
+  * debian/patches:
+    + Add 2001_fix-find-next-previous.patch. Fix find next/previous shortcuts which are
+      broken in Ubuntu due to VTE patch revert-pcre2.patch.
+
+ -- Mike Gabriel <sunweaver@debian.org>  Wed, 18 Apr 2018 10:50:09 +0200
+
 mate-terminal (1.20.0-2parrot1) testing; urgency=medium
 
   * Reimport Parrot Patches.
