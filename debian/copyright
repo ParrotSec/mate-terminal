@@ -1,7 +1,7 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: mate-terminal
-Upstream-Contact: Stefano Karapetsas <stefano@karapetsas.com>
-Source: http://git.mate-desktop.org/mate-terminal/
+Upstream-Name: MATE Terminal
+Upstream-Contact: Martin Wimpress <martin@mate-desktop.org>
+Source: https://git.mate-desktop.org/mate-terminal/
 
 Files: src/terminal-app.c
        src/terminal-options.c
@@ -153,7 +153,8 @@ Files: src/skey/md4.c
 Copyright: 2001, Nikos Mavroyanopoulos
 License: LGPL-3+
 
-Files: po/*.po
+Files: mate-terminal.pot
+       po/*.po
 Copyright: 2009, Christian Persch
            2002-2010, Free Software Foundation, Inc.
            2005-2006, Rosetta Contributors and Canonical Ltd.
@@ -205,6 +206,7 @@ Files: .tx/config
        README
        autogen.sh
        configure.ac
+       makepot
        mate-terminal.1
        mate-terminal.appdata.xml.in
        mate-terminal.desktop.in.in

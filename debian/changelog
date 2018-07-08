@@ -1,8 +1,20 @@
-mate-terminal (1.20.0-4parrot1) testing; urgency=medium
+mate-terminal (1.20.1-1) unstable; urgency=medium
 
-  * Import Parrot patches.
+  * New upstream release.
+  * debian/control:
+    + Update Vcs-*: fields. Package has been migrated to salsa.debian.org.
+    + Bump Standards-Version: to 4.1.4. No changes needed.
+    + Drop pkg-mate-team Alioth mailing list from Uploaders: field.
+  * debian/copyright:
+    + Make Upstream-Name: field's value more human readable.
+    + Update Upstream-Contact: field.
+    + Update Source: field. Use secure URLs.
+    + Update copyright attributions.
+  * debian/upstream/metadata:
+    + Add file. Be compliant with DEP-12 proposal.
+    + Use Martin's address as Contact: address.
 
- -- Lorenzo "Palinuro" Faletra <palinuro@parrotsec.org>  Thu, 26 Apr 2018 13:41:34 +0200
+ -- Mike Gabriel <sunweaver@debian.org>  Sun, 08 Jul 2018 02:24:38 +0200
 
 mate-terminal (1.20.0-4) unstable; urgency=medium
 
@@ -20,12 +32,6 @@ mate-terminal (1.20.0-3) unstable; urgency=medium
 
  -- Mike Gabriel <sunweaver@debian.org>  Wed, 18 Apr 2018 10:50:09 +0200
 
-mate-terminal (1.20.0-2parrot1) testing; urgency=medium
-
-  * Reimport Parrot Patches.
-
- -- Lorenzo "Palinuro" Faletra <palinuro@parrotsec.org>  Sat, 14 Apr 2018 02:35:55 +0200
-
 mate-terminal (1.20.0-2) unstable; urgency=medium
 
   [ Mike Gabriel ]
@@ -39,11 +45,52 @@ mate-terminal (1.20.0-2) unstable; urgency=medium
 
  -- Mike Gabriel <sunweaver@debian.org>  Thu, 05 Apr 2018 22:50:11 +0200
 
-mate-terminal (1.18.1-2parrot1) testing; urgency=medium
+mate-terminal (1.20.0-1) unstable; urgency=medium
 
-  * Reimport parrot patches.
+  [ Martin Wimpress ]
+  * debian/copyright (already in 1.19.1-0ubuntu1):
+    + Update copyright attributions.
 
- -- Lorenzo "Palinuro" Faletra <palinuro@parrotsec.org>  Thu, 31 Aug 2017 02:17:16 +0200
+  [ Vangelis Mouhtsis ]
+  * debian/control (already in 1.19.1-0ubuntu1):
+    + Temporarily have pkg-mate-team ML under Uploaders:.
+    + Update Maintainer: field to debian-mate ML on lists.debian.org.
+    + Rename pretty name of our team -> Debian+Ubuntu MATE Packaging Team.
+    + Bump Standards-Version: to 4.1.3. No changes needed.
+
+  [ Mike Gabriel ]
+  * debian/{control,compat}: Bump DH version level to 11.
+  * debian/{rules,mate-terminal-common.install}:
+    + Move appstream metainfo to correct location.
+  * debian/control:
+    + Update versioned B-Ds (GTK3, VTE, GLib).
+
+ -- Mike Gabriel <sunweaver@debian.org>  Wed, 14 Feb 2018 11:24:53 +0100
+
+mate-terminal (1.20.0-0ubuntu1) bionic; urgency=medium
+
+  * New upstream release.
+
+ -- Martin Wimpress <martin.wimpress@ubuntu.com>  Wed, 07 Feb 2018 14:03:57 +0000
+
+mate-terminal (1.19.1-0ubuntu1) bionic; urgency=medium
+
+  * New upstream release.
+
+ -- Martin Wimpress <martin.wimpress@ubuntu.com>  Wed, 24 Jan 2018 07:06:08 +0000
+
+mate-terminal (1.18.2-1) unstable; urgency=medium
+
+  [ Martin Wimpress ]
+  * New upstream release.
+
+  [ Mike Gabriel ]
+  * debian/control:
+    + Bump Standards-Version: to 4.1.1. No changes needed.
+  * debian/watch:
+    + Use secure URI.
+
+ -- Mike Gabriel <sunweaver@debian.org>  Tue, 14 Nov 2017 11:53:22 +0100
 
 mate-terminal (1.18.1-2) unstable; urgency=medium
 
@@ -151,7 +198,7 @@ mate-terminal (1.15.1-0ubuntu1) yakkety; urgency=medium
 mate-terminal (1.14.1-1) unstable; urgency=medium
 
   [ Martin Wimpress ]
-  * New upstream release. 
+  * New upstream release.
   * debian/control:
     + Add to D (mate-terminal): gsettings-desktop-schemas
 
