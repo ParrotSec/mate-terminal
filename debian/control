@@ -8,7 +8,7 @@ Uploaders: John Paul Adrian Glaubitz <glaubitz@physik.fu-berlin.de>,
            Wences Arana <aranax@debian.org.gt>,
            Vangelis Mouhtsis <vangelis@gnugr.org>,
            Martin Wimpress <code@flexion.org>,
-Standards-Version: 4.1.4
+Standards-Version: 4.3.0
 Build-Depends: debhelper (>= 11~),
                dpkg-dev (>= 1.16.1.1),
                intltool,
